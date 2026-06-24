@@ -1,19 +1,19 @@
 ---
 interface Props {
-    companyName: string
+    authorName: string
     facebookUrl?: string
     instagramUrl?: string
     tiktokUrl?: string
 }
 
-const { companyName, facebookUrl, instagramUrl, tiktokUrl } = Astro.props
+const { authorName, facebookUrl, instagramUrl, tiktokUrl } = Astro.props
 ---
 
 <slot name="logo" />
 
 <p class="w-full text-center italic"
     >Copyright © {new Date().getUTCFullYear()}{" "}
-    {companyName}. All Rights Reserved.</p
+    {authorName}. All Rights Reserved.</p
 >
 
 <section
