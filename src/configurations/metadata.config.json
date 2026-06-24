@@ -1,0 +1,30 @@
+{
+    "main": {
+        "ati_path": "/icons/apple-touch-icon.png",
+        "author": "madliani",
+        "base_path": "/",
+        "charset": "utf-8",
+        "csp": "base-uri 'self'; connect-src 'self'; form-action 'self'",
+        "description": "Burgeria is a fast food company. If you want a fast breakfast, fast lunch, or maybe fast dinner, Burgeria is your choice!",
+        "favicon_path": "/icons/favicon.ico",
+        "favicon_svg_path": "/icons/favicon.svg",
+        "is_indexable": true,
+        "is_supported_ie": false,
+        "keywords": "burgeria",
+        "language": "en",
+        "sitemap_path": "/sitemap-index.xml",
+        "theme_color": "#FFFFFF",
+        "title": "Burgeria — The Fast Food Company",
+        "viewport": "initial-scale=1.0, width=device-width"
+    },
+    "open_graph": {
+        "image_path": "/images/burgeria-homepage.png",
+        "locale": "en_US",
+        "site_name": "burgeria",
+        "type": "website"
+    },
+    "twitter_card": {
+        "card": "summary_large_image",
+        "image_path": "/images/burgeria-homepage.png"
+    }
+}

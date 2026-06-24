@@ -1,0 +1,21 @@
+@mixin default-min-size() {
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+@mixin default-font-family() {
+    font-family:
+        serif,
+        sans-serif,
+        BlinkMacSystemFont,
+        -apple-system;
+}
+
+@mixin font-family($custom) {
+    font-family:
+        $custom,
+        serif,
+        sans-serif,
+        BlinkMacSystemFont,
+        -apple-system;
+}

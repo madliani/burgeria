@@ -1,0 +1,73 @@
+---
+import Main from "@blocs/main.astro"
+import Metadata from "@blocs/metadata.astro"
+import Noscript from "@blocs/noscript.astro"
+import MetadataConfig from "@configurations/metadata.config.json"
+import "@fontsource-variable/playfair-display"
+import "@fortawesome/fontawesome-free/css/all.css"
+import "@styles/global.tw.css"
+import { ClientRouter } from "astro:transitions"
+
+interface Props {
+    description?: string
+    footerStyles?: string
+    headerStyles?: string
+    mainStyles?: string
+    title?: string
+}
+
+const {
+    description = "",
+    footerStyles = "",
+    headerStyles = "",
+    mainStyles = "",
+    title = ""
+} = Astro.props
+---
+
+<!doctype html>
+<html lang={MetadataConfig.main.language}>
+    <head>
+        <Metadata description={description} title={title} />
+
+        <ClientRouter />
+    </head>
+
+    <body
+        class="bg-[url('https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/gradientBg.svg')] bg-cover"
+    >
+        <Noscript class="min-h-[2vh]" />
+
+        <header
+            class={headerStyles ? `min-h-[8vh] ${headerStyles}` : "min-h-[8vh]"}
+        >
+            <slot name="header-content" />
+        </header>
+
+        <Main
+            class={mainStyles ? `min-h-[70vh] ${mainStyles}` : "min-h-[70vh]"}
+        >
+            <slot />
+        </Main>
+
+        <footer
+            class={footerStyles
+                ? `min-h-[20vh] ${footerStyles}`
+                : "min-h-[20vh]"}
+        >
+            <slot name="footer-content" />
+        </footer>
+    </body></html
+>
+
+<style is:global lang="scss">
+    @use "../styles/mixins" as mixins;
+
+    :root {
+        @include mixins.default-min-size;
+    }
+
+    body {
+        @include mixins.default-font-family;
+    }
+</style>

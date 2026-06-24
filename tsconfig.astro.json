@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+        "jsx": "preserve",
+        "types": ["astro/astro-jsx", "astro/client"]
+    },
+    "extends": "./tsconfig.app.json",
+    "include": ["${configDir}/.astro/types.d.ts", "${configDir}/src/**/*.astro"]
+}

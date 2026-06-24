@@ -1,0 +1,16 @@
+{
+    "cSpell.words": [
+        "asynciterable",
+        "burgeria",
+        "fontawesome",
+        "fontsource",
+        "fortawesome",
+        "madliani",
+        "prebuiltui",
+        "starwind"
+    ],
+    "json.schemaDownload.enable": true,
+    "json.schemaDownload.trustedDomains": {
+        "https://starwind.dev/config-schema.json": true
+    }
+}

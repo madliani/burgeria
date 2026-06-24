@@ -1,0 +1,42 @@
+---
+import type { MenuItem } from "@blocs/header-navbar.astro"
+
+import FooterContent from "@blocs/footer-content.astro"
+import HeaderNavbar from "@blocs/header-navbar.astro"
+import HeroSection from "@blocs/hero-section.astro"
+import BaseLayout from "@layouts/base-layout.astro"
+
+const menuItems: MenuItem[] = [
+    { name: "Home", url: "/" },
+    { name: "Menu", url: "/" }
+]
+---
+
+<BaseLayout
+    footerStyles="flex w-full flex-col items-center justify-end gap-3"
+    mainStyles="flex flex-row items-center justify-center align-middle"
+>
+    <HeaderNavbar menuItems={menuItems} slot="header-content">
+        <a href="/" slot="logo"
+            ><img
+                alt="Burgeria logo"
+                src="/icons/burgeria-logo.png"
+                width="128px"
+            /></a
+        >
+    </HeaderNavbar>
+
+    <HeroSection
+        btnText="View menu"
+        subtitle="The Fast Food Company"
+        title="Welcome to Burgeria"
+    />
+
+    <FooterContent
+        companyName="Madliani Studio"
+        facebookUrl="https://facebook.com/"
+        instagramUrl="https://instagram.com/"
+        slot="footer-content"
+        tiktokUrl="https://tiktok.com/"
+    />
+</BaseLayout>

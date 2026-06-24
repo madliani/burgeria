@@ -1,0 +1,8 @@
+{
+    "extends": "./tsconfig.app.json",
+    "include": [
+        "${configDir}/src/svelte/**/*.mock.ts",
+        "${configDir}/src/svelte/**/*.svelte",
+        "${configDir}/src/svelte/**/*.test.ts"
+    ]
+}

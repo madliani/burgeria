@@ -1,0 +1,75 @@
+---
+export interface MenuItem {
+    name: string
+    url: string
+}
+
+interface Props {
+    menuItems: MenuItem[]
+}
+
+const { menuItems } = Astro.props
+---
+
+<nav
+    class="flex w-full flex-row flex-nowrap items-center justify-between px-7 py-5 align-middle text-xl"
+>
+    <slot name="logo" />
+
+    <ul
+        class="hidden sm:flex sm:flex-row sm:flex-nowrap sm:items-center sm:justify-evenly sm:gap-7 sm:align-middle"
+    >
+        {
+            menuItems.map(({ name, url }) => (
+                <li class="cursor-pointer hover:underline">
+                    <a href={url}>{name}</a>
+                </li>
+            ))
+        }
+    </ul>
+
+    <div class="tham-w-6 tham-e-squeeze tham sm:hidden" id="hamburger">
+        <div class="tham-box">
+            <div class="tham-inner"></div>
+        </div>
+    </div>
+
+    <ul
+        class="absolute top-[10vh] hidden w-full flex-col flex-nowrap items-center justify-evenly gap-3 align-middle"
+        id="mobile-menu"
+    >
+        {
+            menuItems.map(({ name, url }) => (
+                <li class="cursor-pointer hover:underline">
+                    <a href={url}>{name}</a>
+                </li>
+            ))
+        }
+    </ul>
+</nav>
+
+<script>
+    document.addEventListener("astro:page-load", () => {
+        const hamburger = document.getElementById("hamburger")
+        const mobileMenu = document.getElementById("mobile-menu")
+
+        const toggleHamburger = () => {
+            hamburger?.classList.toggle("tham-active")
+
+            mobileMenu?.classList.toggle("hidden")
+            mobileMenu?.classList.toggle("flex")
+        }
+
+        hamburger?.addEventListener("click", toggleHamburger)
+
+        for (
+            let index = 0;
+            index <= (mobileMenu?.children.length ?? 0) - 1;
+            index++
+        ) {
+            const menuItem = mobileMenu?.children.item(index)
+
+            menuItem?.addEventListener("click", toggleHamburger)
+        }
+    })
+</script>
