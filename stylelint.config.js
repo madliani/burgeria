@@ -14,7 +14,14 @@ export default {
     rules: {
         "plugin/no-unsupported-browser-features": [
             true,
-            { ignore: ["css-cascade-layers", "css-nesting"], severity: "error" }
+            {
+                ignore: [
+                    "css-cascade-layers",
+                    "css-nesting",
+                    "viewport-unit-variants"
+                ],
+                severity: "error"
+            }
         ],
         "scss/at-rule-no-unknown": null
     }
