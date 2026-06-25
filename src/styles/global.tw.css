@@ -13,8 +13,6 @@
 
 body {
     @apply min-h-svh min-w-svw;
-
-    @apply bg-white;
 }
 
 noscript {
