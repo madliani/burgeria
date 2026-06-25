@@ -1,4 +1,5 @@
 ---
+import Header from "@blocs/header.astro"
 import Main from "@blocs/main.astro"
 import Metadata from "@blocs/metadata.astro"
 import Noscript from "@blocs/noscript.astro"
@@ -34,9 +35,9 @@ const {
     <body>
         <Noscript />
 
-        <header class={headerStyles}>
+        <Header className={headerStyles}>
             <slot name="header-content" />
-        </header>
+        </Header>
 
         <Main class={mainStyles}>
             <slot />
