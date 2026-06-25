@@ -14,7 +14,7 @@
 body {
     @apply min-h-svh min-w-svw;
 
-    @apply bg-white bg-[url('/images/prebuiltui-gradient-background.svg')] bg-cover;
+    @apply bg-white;
 
     @apply font-[Playfair_Display_Variable];
 }
