@@ -6,3 +6,15 @@
 
 @plugin "@tailwindcss/forms";
 @plugin "tailwind-hamburgers";
+
+:root {
+    @apply min-h-svh min-w-svh;
+}
+
+body {
+    @apply font-[Playfair_Display_Variable];
+}
+
+footer {
+    @apply font-serif;
+}
