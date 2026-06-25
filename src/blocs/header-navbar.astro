@@ -28,14 +28,14 @@ const { menuItems } = Astro.props
         }
     </ul>
 
-    <div class="tham-w-6 tham-e-squeeze tham sm:hidden" id="hamburger">
+    <div class="tham-w-6 tham-e-squeeze z-10 tham sm:hidden" id="hamburger">
         <div class="tham-box">
             <div class="tham-inner"></div>
         </div>
     </div>
 
     <ul
-        class="absolute top-[10vh] hidden w-full flex-col flex-nowrap items-center justify-evenly gap-3 align-middle"
+        class="absolute top-0 right-0 bottom-0 left-0 hidden w-full flex-col flex-nowrap items-start justify-start gap-3 bg-white bg-[url('/images/prebuiltui-gradient-background.svg')] bg-cover px-3 py-5 align-middle"
         id="mobile-menu"
     >
         {
@@ -49,18 +49,18 @@ const { menuItems } = Astro.props
 </nav>
 
 <script>
+    const hamburger = document.getElementById("hamburger")
+    const mobileMenu = document.getElementById("mobile-menu")
+
+    const toggleHamburgerMenu = () => {
+        hamburger?.classList.toggle("tham-active")
+
+        mobileMenu?.classList.toggle("hidden")
+        mobileMenu?.classList.toggle("flex")
+    }
+
     document.addEventListener("astro:page-load", () => {
-        const hamburger = document.getElementById("hamburger")
-        const mobileMenu = document.getElementById("mobile-menu")
-
-        const toggleHamburger = () => {
-            hamburger?.classList.toggle("tham-active")
-
-            mobileMenu?.classList.toggle("hidden")
-            mobileMenu?.classList.toggle("flex")
-        }
-
-        hamburger?.addEventListener("click", toggleHamburger)
+        hamburger?.addEventListener("click", toggleHamburgerMenu)
 
         for (
             let index = 0;
@@ -69,7 +69,7 @@ const { menuItems } = Astro.props
         ) {
             const menuItem = mobileMenu?.children.item(index)
 
-            menuItem?.addEventListener("click", toggleHamburger)
+            menuItem?.addEventListener("click", toggleHamburgerMenu)
         }
     })
 </script>
