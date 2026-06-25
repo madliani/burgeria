@@ -8,13 +8,31 @@
 @plugin "tailwind-hamburgers";
 
 :root {
-    @apply min-h-svh min-w-svh;
+    @apply min-h-svh min-w-svw;
 }
 
 body {
+    @apply min-h-svh min-w-svw;
+
+    @apply bg-white bg-[url('/images/prebuiltui-gradient-background.svg')] bg-cover;
+
     @apply font-[Playfair_Display_Variable];
 }
 
+noscript {
+    @apply min-h-[2svh];
+}
+
+header {
+    @apply min-h-[8svh];
+}
+
+main {
+    @apply min-h-[70svh];
+}
+
 footer {
+    @apply min-h-[20svh];
+
     @apply font-serif;
 }

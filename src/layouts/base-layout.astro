@@ -31,28 +31,18 @@ const {
         <ClientRouter />
     </head>
 
-    <body
-        class="bg-white bg-[url('/images/prebuiltui-gradient-background.svg')] bg-cover"
-    >
-        <Noscript class="min-h-[2vh]" />
+    <body>
+        <Noscript />
 
-        <header
-            class={headerStyles ? `min-h-[8vh] ${headerStyles}` : "min-h-[8vh]"}
-        >
+        <header class={headerStyles}>
             <slot name="header-content" />
         </header>
 
-        <Main
-            class={mainStyles ? `min-h-[70vh] ${mainStyles}` : "min-h-[70vh]"}
-        >
+        <Main class={mainStyles}>
             <slot />
         </Main>
 
-        <footer
-            class={footerStyles
-                ? `min-h-[20vh] ${footerStyles}`
-                : "min-h-[20vh]"}
-        >
+        <footer class={footerStyles}>
             <slot name="footer-content" />
         </footer>
     </body></html
