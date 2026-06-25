@@ -61,6 +61,7 @@ const { menuItems } = Astro.props
 
     document.addEventListener("astro:page-load", () => {
         hamburger?.addEventListener("click", toggleHamburgerMenu)
+        mobileMenu?.addEventListener("click", toggleHamburgerMenu)
 
         for (
             let index = 0;
