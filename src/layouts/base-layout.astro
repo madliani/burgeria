@@ -1,4 +1,5 @@
 ---
+import Footer from "@blocs/footer.astro"
 import Header from "@blocs/header.astro"
 import Main from "@blocs/main.astro"
 import Metadata from "@blocs/metadata.astro"
@@ -43,8 +44,8 @@ const {
             <slot />
         </Main>
 
-        <footer class={footerStyles}>
+        <Footer className={footerStyles}>
             <slot name="footer-content" />
-        </footer>
+        </Footer>
     </body></html
 >
