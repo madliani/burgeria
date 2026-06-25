@@ -9,6 +9,7 @@ import "@styles/global.tw.css"
 import { ClientRouter } from "astro:transitions"
 
 interface Props {
+    bodyStyles?: string
     description?: string
     footerStyles?: string
     headerStyles?: string
@@ -17,6 +18,7 @@ interface Props {
 }
 
 const {
+    bodyStyles = "",
     description = "",
     footerStyles = "",
     headerStyles = "",
@@ -33,7 +35,7 @@ const {
         <ClientRouter />
     </head>
 
-    <body>
+    <body class={bodyStyles}>
         <Noscript />
 
         <Header className={headerStyles}>
@@ -49,9 +51,3 @@ const {
         </Footer>
     </body></html
 >
-
-<style is:global>
-    body {
-        @apply bg-[url('/images/prebuiltui-gradient-background.svg')] bg-cover;
-    }
-</style>
