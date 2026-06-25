@@ -15,8 +15,6 @@ body {
     @apply min-h-svh min-w-svw;
 
     @apply bg-white;
-
-    @apply font-[Playfair_Display_Variable];
 }
 
 noscript {
@@ -33,6 +31,4 @@ main {
 
 footer {
     @apply min-h-[20svh];
-
-    @apply font-serif;
 }
