@@ -33,9 +33,7 @@ const {
         <ClientRouter />
     </head>
 
-    <body
-        class="bg-[url('/images/prebuiltui-gradient-background.svg')] bg-cover"
-    >
+    <body>
         <Noscript />
 
         <Header className={headerStyles}>
@@ -51,3 +49,9 @@ const {
         </Footer>
     </body></html
 >
+
+<style is:global>
+    body {
+        @apply bg-[url('/images/prebuiltui-gradient-background.svg')] bg-cover;
+    }
+</style>
