@@ -3,7 +3,6 @@ import Footer from "@blocs/footer.astro"
 import Header from "@blocs/header.astro"
 import Main from "@blocs/main.astro"
 import Metadata from "@blocs/metadata.astro"
-import Noscript from "@blocs/noscript.astro"
 import MetadataConfig from "@configurations/metadata.config.json"
 import "@styles/global.tw.css"
 import { ClientRouter } from "astro:transitions"
@@ -37,7 +36,7 @@ const {
 
     <body class={bodyStyles}>
         <Header className={headerStyles}>
-            <Noscript />
+            <slot name="header-noscript" />
 
             <slot name="header-content" />
         </Header>

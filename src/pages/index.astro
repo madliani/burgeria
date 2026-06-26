@@ -4,6 +4,7 @@ import type { MenuItem } from "@blocs/header-navbar.astro"
 import FooterContent from "@blocs/footer-content.astro"
 import HeaderNavbar from "@blocs/header-navbar.astro"
 import HeroSection from "@blocs/hero-section.astro"
+import Noscript from "@blocs/noscript.astro"
 import BaseLayout from "@layouts/base-layout.astro"
 
 const menuItems: MenuItem[] = [
@@ -19,6 +20,8 @@ const bgUrl = "/images/prebuiltui-gradient-background.svg"
     footerStyles="flex w-full flex-col items-center justify-end gap-3 font-serif"
     mainStyles="flex flex-row items-center justify-center align-middle"
 >
+    <Noscript slot="header-noscript" />
+
     <HeaderNavbar menuItems={menuItems} slot="header-content">
         <a href="/" slot="logo"
             ><img
