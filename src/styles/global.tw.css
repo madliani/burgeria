@@ -7,26 +7,27 @@
 @plugin "@tailwindcss/forms";
 @plugin "tailwind-hamburgers";
 
-:root {
-    @apply min-h-svh min-w-svw;
-}
+@layer design, layouts, pages, blocs, components, modifiers;
 
-body {
-    @apply min-h-svh min-w-svw;
-}
+@layer design {
+    :root,
+    body {
+        @apply min-h-svh min-w-svw;
+    }
 
-noscript {
-    @apply min-h-[2svh];
-}
+    noscript {
+        @apply min-h-[2svh];
+    }
 
-header {
-    @apply min-h-[8svh];
-}
+    header {
+        @apply min-h-[8svh];
+    }
 
-main {
-    @apply min-h-[70svh];
-}
+    main {
+        @apply min-h-[70svh];
+    }
 
-footer {
-    @apply min-h-[20svh];
+    footer {
+        @apply min-h-[20svh];
+    }
 }
