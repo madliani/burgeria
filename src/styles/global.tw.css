@@ -16,7 +16,7 @@
     }
 
     header {
-        @apply min-h-[8svh];
+        @apply min-h-[10svh];
     }
 
     header noscript {
