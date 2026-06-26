@@ -20,6 +20,7 @@
     }
 
     header noscript {
+        @apply inline-block;
         @apply w-full;
 
         @apply text-center text-xl;
