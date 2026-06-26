@@ -6,6 +6,7 @@
         "fontsource",
         "fortawesome",
         "madliani",
-        "noscript"
+        "noscript",
+        "nowrap"
     ]
 }
