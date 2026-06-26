@@ -15,16 +15,22 @@
         @apply min-h-svh min-w-svw;
     }
 
-    noscript {
-        @apply min-h-[2svh];
-    }
-
     header {
         @apply min-h-[8svh];
     }
 
+    header noscript {
+        @apply w-full;
+
+        @apply text-center text-xl;
+    }
+
     main {
         @apply min-h-[70svh];
+        @apply w-full;
+
+        @apply flex flex-col flex-nowrap;
+        @apply items-center justify-center align-middle;
     }
 
     footer {
