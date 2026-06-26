@@ -49,17 +49,17 @@ const { menuItems } = Astro.props
 </nav>
 
 <script>
-    const hamburger = document.getElementById("hamburger")
-    const mobileMenu = document.getElementById("mobile-menu")
-
-    const toggleHamburgerMenu = () => {
-        hamburger?.classList.toggle("tham-active")
-
-        mobileMenu?.classList.toggle("hidden")
-        mobileMenu?.classList.toggle("flex")
-    }
-
     document.addEventListener("astro:page-load", () => {
+        const hamburger = document.getElementById("hamburger")
+        const mobileMenu = document.getElementById("mobile-menu")
+
+        const toggleHamburgerMenu = () => {
+            hamburger?.classList.toggle("tham-active")
+
+            mobileMenu?.classList.toggle("hidden")
+            mobileMenu?.classList.toggle("flex")
+        }
+
         hamburger?.addEventListener("click", toggleHamburgerMenu)
         mobileMenu?.addEventListener("click", toggleHamburgerMenu)
 
