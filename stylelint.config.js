@@ -4,7 +4,7 @@ export default {
     cache: true,
     defaultSeverity: "error",
     extends: [
-        "stylelint-config-standard-scss",
+        "stylelint-config-standard",
         "stylelint-config-clean-order",
         "stylelint-config-astro"
     ],
@@ -22,7 +22,6 @@ export default {
                 ],
                 severity: "error"
             }
-        ],
-        "scss/at-rule-no-unknown": null
+        ]
     }
 }
