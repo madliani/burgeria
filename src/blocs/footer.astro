@@ -1,11 +1,73 @@
 ---
+import AbstractFooter from "@components/abstract-footer.astro"
+
 interface Props {
-    className?: string
+    authorName: string
+    facebookUrl?: string
+    instagramUrl?: string
+    tiktokUrl?: string
 }
 
-const { className } = Astro.props
+const { authorName, facebookUrl, instagramUrl, tiktokUrl } = Astro.props
 ---
 
-<footer class={className}>
-    <slot />
-</footer>
+<AbstractFooter>
+    <slot name="logo" />
+
+    <p class="w-full text-center italic"
+        >Copyright © {new Date().getUTCFullYear()}{" "}
+        {authorName}. All Rights Reserved.</p
+    >
+
+    <section
+        class="flex w-full flex-row flex-nowrap items-center justify-center gap-3"
+    >
+        {
+            facebookUrl && (
+                <a
+                    aria-label="Facebook link"
+                    class="cursor-pointer"
+                    href={facebookUrl}
+                    referrerpolicy="no-referrer"
+                    rel="noopener"
+                    target="_blank"
+                    title="Facebook link"
+                >
+                    <i class="fa-brands fa-facebook" />
+                </a>
+            )
+        }
+
+        {
+            instagramUrl && (
+                <a
+                    aria-label="Instagram link"
+                    class="cursor-pointer"
+                    href={instagramUrl}
+                    referrerpolicy="no-referrer"
+                    rel="noopener"
+                    target="_blank"
+                    title="Instagram link"
+                >
+                    <i class="fa-brands fa-instagram" />
+                </a>
+            )
+        }
+
+        {
+            tiktokUrl && (
+                <a
+                    aria-label="TikTok link"
+                    class="cursor-pointer"
+                    href={tiktokUrl}
+                    referrerpolicy="no-referrer"
+                    rel="noopener"
+                    target="_blank"
+                    title="TikTok link"
+                >
+                    <i class="fa-brands fa-tiktok" />
+                </a>
+            )
+        }
+    </section>
+</AbstractFooter>

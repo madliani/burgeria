@@ -29,7 +29,11 @@ const { description = "", title = "" } = Astro.props
         <slot />
     </Main>
 
-    <Footer className="footer" slot="footer">
-        <slot name="footer-content" />
-    </Footer>
+    <Footer
+        authorName="Madliani Studio"
+        facebookUrl="https://facebook.com/"
+        instagramUrl="https://instagram.com/"
+        slot="footer"
+        tiktokUrl="https://tiktok.com/"
+    />
 </AbstractLayout>
