@@ -1,0 +1,36 @@
+@import "./config.tw.css";
+
+@layer design, layouts, pages, blocs, components, important;
+
+@layer design {
+    :root {
+        @apply min-h-svh min-w-svw;
+    }
+
+    .body {
+        @apply min-h-svh min-w-svw;
+    }
+
+    .header {
+        @apply min-h-[10svh];
+    }
+
+    .header noscript {
+        @apply inline-block;
+        @apply w-full;
+
+        @apply text-center text-xl;
+    }
+
+    .main {
+        @apply min-h-[70svh];
+        @apply w-full;
+
+        @apply flex flex-col flex-nowrap;
+        @apply items-center justify-center align-middle;
+    }
+
+    .footer {
+        @apply min-h-[20svh];
+    }
+}
