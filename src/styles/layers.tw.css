@@ -29,7 +29,7 @@
     }
 
     .noscript {
-        @apply bg-[red];
+        @apply bg-red;
         @apply text-center text-xl;
     }
 
