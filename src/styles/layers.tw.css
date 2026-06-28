@@ -3,12 +3,7 @@
 @layer design, secondary, primary, important;
 
 @layer design {
-    :root {
-        @apply min-h-svh min-w-svw;
-    }
-
     .body {
-        @apply min-h-svh min-w-svw;
         @apply bg-white;
         @apply bg-[url("/images/prebuiltui-gradient-background.svg")] bg-cover;
         @apply font-[Playfair_Display_Variable];
