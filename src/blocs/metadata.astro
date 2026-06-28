@@ -1,6 +1,9 @@
 ---
 import MetadataConfig from "@configurations/metadata.config.json"
 
+import OpenGraph from "./open-graph.astro"
+import TwitterCard from "./twitter-card.astro"
+
 interface Props {
     description?: string
     title?: string
@@ -82,21 +85,20 @@ const twitterCardMetadata = {
 
 <title>{mainMetadata.title}</title>
 
-<!-- Open Graph -->
-<meta content={openGraphMetadata.description} property="og:description" />
-<meta content={openGraphMetadata.imagePath} property="og:image" />
-<meta content={openGraphMetadata.locale} property="og:locale" />
-<meta content={openGraphMetadata.siteName} property="og:site_name" />
-<meta content={openGraphMetadata.title} property="og:title" />
-<meta content={openGraphMetadata.type} property="og:type" />
-<meta content={openGraphMetadata.url} property="og:url" />
-
-<!-- Twitter Card -->
-<meta content={twitterCardMetadata.card} property="twitter:card" />
-<meta
-    content={twitterCardMetadata.description}
-    property="twitter:description"
+<OpenGraph
+    description={openGraphMetadata.description}
+    imagePath={openGraphMetadata.imagePath}
+    locale={openGraphMetadata.locale}
+    siteName={openGraphMetadata.siteName}
+    title={openGraphMetadata.title}
+    type={openGraphMetadata.type}
+    url={openGraphMetadata.url}
 />
-<meta content={twitterCardMetadata.imagePath} name="twitter:image" />
-<meta content={twitterCardMetadata.title} property="twitter:title" />
-<meta content={twitterCardMetadata.url} property="twitter:url" />
+
+<TwitterCard
+    card={twitterCardMetadata.card}
+    description={twitterCardMetadata.description}
+    imagePath={twitterCardMetadata.imagePath}
+    title={twitterCardMetadata.title}
+    url={twitterCardMetadata.url}
+/>
