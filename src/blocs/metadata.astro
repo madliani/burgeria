@@ -9,13 +9,13 @@ interface Props {
     title?: string
 }
 
-function makeCSPString(csp: typeof MetadataConfig.csp) {
+function CSPTemplate(csp: typeof MetadataConfig.csp) {
     const { base_uri, connect_src, form_action } = csp
 
     return `base-uri=${base_uri}, connect-src=${connect_src}, form-action=${form_action}`
 }
 
-function makeViewportString(viewport: typeof MetadataConfig.viewport) {
+function viewportTemplate(viewport: typeof MetadataConfig.viewport) {
     const { initial_scale, width } = viewport
 
     return `initial-scale=${initial_scale.toFixed(1)}, width=${width}`
@@ -27,7 +27,7 @@ const metadata = {
     basePath: MetadataConfig.base_path,
     canonicalURL: new URL(Astro.url.pathname, Astro.site),
     charset: MetadataConfig.charset,
-    csp: makeCSPString(MetadataConfig.csp),
+    csp: CSPTemplate(MetadataConfig.csp),
     description: Astro.props.description || MetadataConfig.description,
     faviconPath: MetadataConfig.favicon_path,
     faviconSVGPath: MetadataConfig.favicon_svg_path,
@@ -40,7 +40,7 @@ const metadata = {
     title: Astro.props.title
         ? `${Astro.props.title} | ${MetadataConfig.title}`
         : MetadataConfig.title,
-    viewport: makeViewportString(MetadataConfig.viewport)
+    viewport: viewportTemplate(MetadataConfig.viewport)
 }
 
 const openGraphMetadata = {
