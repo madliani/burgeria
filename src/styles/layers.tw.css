@@ -16,14 +16,12 @@
     }
 
     .header noscript {
-        @apply inline-block;
-        @apply w-full;
+        @apply inline-block w-full;
         @apply text-center text-xl;
     }
 
     .main {
         @apply min-h-[70svh];
-        @apply w-full;
         @apply flex flex-col flex-nowrap;
         @apply items-center justify-center align-middle;
     }
