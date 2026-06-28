@@ -21,7 +21,7 @@ export default {
     singleAttributePerLine: false,
     singleQuote: false,
     tabWidth: 4,
-    tailwindStylesheet: "./src/styles/global.tw.css",
+    tailwindStylesheet: "./src/styles/config.tw.css",
     trailingComma: "none",
     useTabs: false
 }
