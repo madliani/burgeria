@@ -9,6 +9,9 @@
 
     .body {
         @apply min-h-svh min-w-svw;
+        @apply bg-white;
+        @apply bg-[url("/images/prebuiltui-gradient-background.svg")] bg-cover;
+        @apply font-[Playfair_Display_Variable];
     }
 
     .header {
@@ -17,6 +20,7 @@
 
     .noscript {
         @apply inline-block w-full;
+        @apply bg-[#FF0000];
         @apply text-center text-xl;
     }
 
@@ -28,28 +32,9 @@
 
     .footer {
         @apply min-h-[20svh];
-    }
-}
-
-@layer design {
-    .body {
-        @apply bg-white bg-[url("/images/prebuiltui-gradient-background.svg")] bg-cover;
-        @apply font-[Playfair_Display_Variable];
-    }
-
-    .main {
-        @apply flex flex-row flex-nowrap;
-        @apply items-center justify-center align-middle;
-    }
-
-    .footer {
         @apply flex w-full flex-col flex-nowrap;
         @apply items-center justify-end align-middle;
         @apply gap-3;
         @apply font-serif;
-    }
-
-    .noscript {
-        @apply bg-[#FF0000];
     }
 }
