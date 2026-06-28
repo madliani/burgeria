@@ -50,6 +50,6 @@
     }
 
     .noscript {
-        background-color: red;
+        @apply bg-[#FF0000];
     }
 }
