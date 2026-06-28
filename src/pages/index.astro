@@ -1,9 +1,9 @@
 ---
-import type { MenuItem } from "@blocs/header-navbar.astro"
+import type { MenuItem } from "@blocs/navbar.astro"
 
 import FooterContent from "@blocs/footer-content.astro"
-import HeaderNavbar from "@blocs/header-navbar.astro"
 import HeroSection from "@blocs/hero-section.astro"
+import Navbar from "@blocs/navbar.astro"
 import Noscript from "@blocs/noscript.astro"
 import BaseLayout from "@layouts/base-layout.astro"
 
@@ -16,7 +16,7 @@ const menuItems: MenuItem[] = [
 <BaseLayout>
     <Noscript slot="header-noscript" />
 
-    <HeaderNavbar menuItems={menuItems} slot="header-content">
+    <Navbar menuItems={menuItems} slot="header-content">
         <a href="/" slot="logo"
             ><img
                 alt="Burgeria logo"
@@ -24,7 +24,7 @@ const menuItems: MenuItem[] = [
                 width="128px"
             /></a
         >
-    </HeaderNavbar>
+    </Navbar>
 
     <HeroSection
         btnText="View menu"
