@@ -18,14 +18,12 @@
     .header noscript {
         @apply inline-block;
         @apply w-full;
-
         @apply text-center text-xl;
     }
 
     .main {
         @apply min-h-[70svh];
         @apply w-full;
-
         @apply flex flex-col flex-nowrap;
         @apply items-center justify-center align-middle;
     }
@@ -37,14 +35,19 @@
 
 @layer design {
     .body {
-        @apply bg-white bg-[url("/images/prebuiltui-gradient-background.svg")] bg-cover font-[Playfair_Display_Variable];
+        @apply bg-white bg-[url("/images/prebuiltui-gradient-background.svg")] bg-cover;
+        @apply font-[Playfair_Display_Variable];
     }
 
     .main {
-        @apply flex flex-row items-center justify-center align-middle;
+        @apply flex flex-row;
+        @apply items-center justify-center align-middle;
     }
 
     .footer {
-        @apply flex w-full flex-col items-center justify-end gap-3 font-serif;
+        @apply flex w-full flex-col;
+        @apply items-center justify-end;
+        @apply gap-3;
+        @apply font-serif;
     }
 }
