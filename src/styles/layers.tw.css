@@ -1,5 +1,3 @@
-@import "./config.tw.css";
-
 @layer design.geometry, design.themes.dark, design.themes.light, important;
 
 @layer design.geometry {

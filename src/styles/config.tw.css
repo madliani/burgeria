@@ -3,3 +3,7 @@
 
 @plugin "@tailwindcss/forms";
 @plugin "tailwind-hamburgers";
+
+@utility bg-red {
+    @apply bg-[red];
+}
