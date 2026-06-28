@@ -16,7 +16,7 @@ interface Props {
 const { description = "", title = "" } = Astro.props
 ---
 
-<AbstractLayout lang={MetadataConfig.main.language}>
+<AbstractLayout lang={MetadataConfig.language}>
     <Fragment slot="head">
         <Metadata description={description} title={title} />
 

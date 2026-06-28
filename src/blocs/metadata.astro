@@ -9,81 +9,81 @@ interface Props {
     title?: string
 }
 
-const mainMetadata = {
-    atiPath: MetadataConfig.main.ati_path,
-    author: MetadataConfig.main.author,
-    basePath: MetadataConfig.main.base_path,
+const metadata = {
+    atiPath: MetadataConfig.ati_path,
+    author: MetadataConfig.author,
+    basePath: MetadataConfig.base_path,
     canonicalURL: new URL(Astro.url.pathname, Astro.site),
-    charset: MetadataConfig.main.charset,
-    csp: MetadataConfig.main.csp,
-    description: Astro.props.description || MetadataConfig.main.description,
-    faviconPath: MetadataConfig.main.favicon_path,
-    faviconSVGPath: MetadataConfig.main.favicon_svg_path,
+    charset: MetadataConfig.charset,
+    csp: MetadataConfig.csp,
+    description: Astro.props.description || MetadataConfig.description,
+    faviconPath: MetadataConfig.favicon_path,
+    faviconSVGPath: MetadataConfig.favicon_svg_path,
     generator: Astro.generator,
-    isIndexable: MetadataConfig.main.is_indexable,
-    isSupportedIE: MetadataConfig.main.is_supported_ie,
-    keywords: MetadataConfig.main.keywords,
-    sitemapPath: MetadataConfig.main.sitemap_path,
-    themeColor: MetadataConfig.main.theme_color,
+    isIndexable: MetadataConfig.is_indexable,
+    isSupportedIE: MetadataConfig.is_supported_ie,
+    keywords: MetadataConfig.keywords,
+    sitemapPath: MetadataConfig.sitemap_path,
+    themeColor: MetadataConfig.theme_color,
     title: Astro.props.title
-        ? `${Astro.props.title} | ${MetadataConfig.main.title}`
-        : MetadataConfig.main.title,
-    viewport: MetadataConfig.main.viewport
+        ? `${Astro.props.title} | ${MetadataConfig.title}`
+        : MetadataConfig.title,
+    viewport: MetadataConfig.viewport
 }
 
 const openGraphMetadata = {
-    description: mainMetadata.description,
+    description: metadata.description,
     imagePath: MetadataConfig.open_graph.image_path,
     locale: MetadataConfig.open_graph.locale,
     siteName: MetadataConfig.open_graph.site_name,
-    title: mainMetadata.title,
+    title: metadata.title,
     type: MetadataConfig.open_graph.type,
     url: Astro.url
 }
 
 const twitterCardMetadata = {
     card: MetadataConfig.twitter_card.card,
-    description: mainMetadata.description,
+    description: metadata.description,
     imagePath: MetadataConfig.twitter_card.image_path,
-    title: mainMetadata.title,
+    title: metadata.title,
     url: Astro.url
 }
 ---
 
-<meta charset={mainMetadata.charset} />
+<meta charset={metadata.charset} />
 
-<meta content={mainMetadata.author} name="author" />
-<meta content={mainMetadata.description} name="description" />
-<meta content={mainMetadata.generator} name="generator" />
-<meta content={mainMetadata.keywords} name="keywords" />
-<meta content={mainMetadata.themeColor} name="theme-color" />
-<meta content={mainMetadata.title} name="title" />
-<meta content={mainMetadata.viewport} name="viewport" />
+<meta content={metadata.author} name="author" />
+<meta content={metadata.description} name="description" />
+<meta content={metadata.generator} name="generator" />
+<meta content={metadata.keywords} name="keywords" />
+<meta content={metadata.themeColor} name="theme-color" />
+<meta content={metadata.title} name="title" />
+<meta content={metadata.viewport} name="viewport" />
 {
-    mainMetadata.isIndexable ? (
+    metadata.isIndexable ? (
         <meta content="follow, index" name="robots" />
     ) : (
         <meta content="nofollow, noindex" name="robots" />
     )
 }
 
-<meta content={mainMetadata.csp} http-equiv="content-security-policy" />
+<meta content={metadata.csp} http-equiv="content-security-policy" />
 {
-    mainMetadata.isSupportedIE && (
+    metadata.isSupportedIE && (
         <meta content="ie=edge" http-equiv="X-UA-Compatible" />
     )
 }
 
-<base href={mainMetadata.basePath} />
+<base href={metadata.basePath} />
 
-<link href={mainMetadata.canonicalURL} rel="canonical" />
-<link href={mainMetadata.sitemapPath} rel="sitemap" />
+<link href={metadata.canonicalURL} rel="canonical" />
+<link href={metadata.sitemapPath} rel="sitemap" />
 
-<link href={mainMetadata.faviconPath} rel="icon" type="image/x-icon" />
-<link href={mainMetadata.faviconSVGPath} rel="icon" type="image/svg+xml" />
-<link href={mainMetadata.atiPath} rel="apple-touch-icon" type="image/png" />
+<link href={metadata.faviconPath} rel="icon" type="image/x-icon" />
+<link href={metadata.faviconSVGPath} rel="icon" type="image/svg+xml" />
+<link href={metadata.atiPath} rel="apple-touch-icon" type="image/png" />
 
-<title>{mainMetadata.title}</title>
+<title>{metadata.title}</title>
 
 <OpenGraph
     description={openGraphMetadata.description}
