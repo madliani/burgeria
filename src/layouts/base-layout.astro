@@ -3,6 +3,7 @@ import Footer from "@blocs/footer.astro"
 import Header from "@blocs/header.astro"
 import Main from "@blocs/main.astro"
 import Metadata from "@blocs/metadata.astro"
+import Layout from "@components/layout.astro"
 import MetadataConfig from "@configurations/metadata.config.json"
 import "@styles/global.tw.css"
 import { ClientRouter } from "astro:transitions"
@@ -15,27 +16,24 @@ interface Props {
 const { description = "", title = "" } = Astro.props
 ---
 
-<!doctype html>
-<html lang={MetadataConfig.main.language}>
-    <head>
+<Layout lang={MetadataConfig.main.language}>
+    <Fragment slot="head">
         <Metadata description={description} title={title} />
 
         <ClientRouter />
-    </head>
+    </Fragment>
 
-    <body class="body">
-        <Header className="header">
-            <slot name="header-noscript" />
+    <Header className="header" slot="header">
+        <slot name="header-noscript" />
 
-            <slot name="header-content" />
-        </Header>
+        <slot name="header-content" />
+    </Header>
 
-        <Main class="main">
-            <slot />
-        </Main>
+    <Main class="main">
+        <slot />
+    </Main>
 
-        <Footer className="footer">
-            <slot name="footer-content" />
-        </Footer>
-    </body></html
->
+    <Footer className="footer" slot="footer">
+        <slot name="footer-content" />
+    </Footer>
+</Layout>
