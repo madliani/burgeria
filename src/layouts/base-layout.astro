@@ -23,11 +23,7 @@ const { description = "", title = "" } = Astro.props
         <ClientRouter />
     </Fragment>
 
-    <Header className="header" slot="header">
-        <slot name="header-noscript" />
-
-        <slot name="header-content" />
-    </Header>
+    <Header slot="header" />
 
     <Main class="main">
         <slot />

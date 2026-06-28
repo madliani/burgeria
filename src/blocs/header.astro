@@ -1,11 +1,26 @@
 ---
-interface Props {
-    className?: string
-}
+import type { MenuItem } from "@blocs/navbar.astro"
 
-const { className } = Astro.props
+import Navbar from "@blocs/navbar.astro"
+import Noscript from "@blocs/noscript.astro"
+import BurgeriaUIHeader from "@components/header.astro"
+
+const menuItems: MenuItem[] = [
+    { name: "Home", url: "/" },
+    { name: "Menu", url: "/" }
+]
 ---
 
-<header class={className}>
-    <slot />
-</header>
+<BurgeriaUIHeader>
+    <Noscript slot="noscript" />
+
+    <Navbar menuItems={menuItems}>
+        <a href="/" slot="logo"
+            ><img
+                alt="Burgeria logo"
+                src="/icons/burgeria-logo.png"
+                width="128px"
+            /></a
+        >
+    </Navbar>
+</BurgeriaUIHeader>

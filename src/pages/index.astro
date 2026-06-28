@@ -1,31 +1,10 @@
 ---
-import type { MenuItem } from "@blocs/navbar.astro"
-
 import FooterContent from "@blocs/footer-content.astro"
 import HeroSection from "@blocs/hero-section.astro"
-import Navbar from "@blocs/navbar.astro"
-import Noscript from "@blocs/noscript.astro"
 import BaseLayout from "@layouts/base-layout.astro"
-
-const menuItems: MenuItem[] = [
-    { name: "Home", url: "/" },
-    { name: "Menu", url: "/" }
-]
 ---
 
 <BaseLayout>
-    <Noscript slot="header-noscript" />
-
-    <Navbar menuItems={menuItems} slot="header-content">
-        <a href="/" slot="logo"
-            ><img
-                alt="Burgeria logo"
-                src="/icons/burgeria-logo.png"
-                width="128px"
-            /></a
-        >
-    </Navbar>
-
     <HeroSection
         btnText="View menu"
         subtitle="The Fast Food Company"
