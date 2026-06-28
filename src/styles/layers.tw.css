@@ -15,7 +15,7 @@
         @apply min-h-[10svh];
     }
 
-    .header noscript {
+    .noscript {
         @apply inline-block w-full;
         @apply text-center text-xl;
     }
@@ -47,5 +47,9 @@
         @apply items-center justify-end align-middle;
         @apply gap-3;
         @apply font-serif;
+    }
+
+    .noscript {
+        background-color: red;
     }
 }
