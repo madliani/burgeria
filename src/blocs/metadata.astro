@@ -9,6 +9,12 @@ interface Props {
     title?: string
 }
 
+function makeViewportString(viewport: typeof MetadataConfig.viewport) {
+    const { initial_scale, width } = viewport
+
+    return `initial-scale=${initial_scale.toFixed(1)}, width=${width}`
+}
+
 const metadata = {
     atiPath: MetadataConfig.ati_path,
     author: MetadataConfig.author,
@@ -28,7 +34,7 @@ const metadata = {
     title: Astro.props.title
         ? `${Astro.props.title} | ${MetadataConfig.title}`
         : MetadataConfig.title,
-    viewport: MetadataConfig.viewport
+    viewport: makeViewportString(MetadataConfig.viewport)
 }
 
 const openGraphMetadata = {
