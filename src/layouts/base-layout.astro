@@ -8,22 +8,11 @@ import "@styles/global.tw.css"
 import { ClientRouter } from "astro:transitions"
 
 interface Props {
-    bodyStyles?: string
     description?: string
-    footerStyles?: string
-    headerStyles?: string
-    mainStyles?: string
     title?: string
 }
 
-const {
-    bodyStyles = "",
-    description = "",
-    footerStyles = "",
-    headerStyles = "",
-    mainStyles = "",
-    title = ""
-} = Astro.props
+const { description = "", title = "" } = Astro.props
 ---
 
 <!doctype html>
@@ -34,18 +23,18 @@ const {
         <ClientRouter />
     </head>
 
-    <body class={bodyStyles}>
-        <Header className={headerStyles}>
+    <body class="body">
+        <Header className="header">
             <slot name="header-noscript" />
 
             <slot name="header-content" />
         </Header>
 
-        <Main class={mainStyles}>
+        <Main class="main">
             <slot />
         </Main>
 
-        <Footer className={footerStyles}>
+        <Footer className="footer">
             <slot name="footer-content" />
         </Footer>
     </body></html

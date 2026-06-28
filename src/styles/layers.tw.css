@@ -34,3 +34,17 @@
         @apply min-h-[20svh];
     }
 }
+
+@layer design {
+    .body {
+        @apply bg-white bg-[url("/images/prebuiltui-gradient-background.svg")] bg-cover font-[Playfair_Display_Variable];
+    }
+
+    .main {
+        @apply flex flex-row items-center justify-center align-middle;
+    }
+
+    .footer {
+        @apply flex w-full flex-col items-center justify-end gap-3 font-serif;
+    }
+}
