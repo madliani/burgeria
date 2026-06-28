@@ -20,7 +20,7 @@
 
     .noscript {
         @apply inline-block w-full;
-        @apply bg-[#FF0000];
+        @apply bg-[red];
         @apply text-center text-xl;
     }
 
