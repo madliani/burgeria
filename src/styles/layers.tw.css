@@ -1,22 +1,14 @@
 @import "./config.tw.css";
 
-@layer design, secondary, primary, important;
+@layer design.geometry, design.themes, important;
 
-@layer design {
-    .body {
-        @apply bg-white;
-        @apply bg-[url("/images/prebuiltui-gradient-background.svg")] bg-cover;
-        @apply font-[Playfair_Display_Variable];
-    }
-
+@layer design.geometry {
     .header {
         @apply min-h-[10svh];
     }
 
     .noscript {
         @apply inline-block w-full;
-        @apply bg-[red];
-        @apply text-center text-xl;
     }
 
     .main {
@@ -30,6 +22,22 @@
         @apply flex w-full flex-col flex-nowrap;
         @apply items-center justify-end align-middle;
         @apply gap-3;
+    }
+}
+
+@layer design.themes {
+    .body {
+        @apply bg-white;
+        @apply bg-[url("/images/prebuiltui-gradient-background.svg")] bg-cover;
+        @apply font-[Playfair_Display_Variable];
+    }
+
+    .noscript {
+        @apply bg-[red];
+        @apply text-center text-xl;
+    }
+
+    .footer {
         @apply font-serif;
     }
 }
