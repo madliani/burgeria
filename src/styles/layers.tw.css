@@ -1,6 +1,6 @@
 @import "./config.tw.css";
 
-@layer design, layouts, pages, blocs, components, important;
+@layer design, secondary, primary, important;
 
 @layer design {
     :root {
