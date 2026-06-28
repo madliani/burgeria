@@ -9,7 +9,7 @@ interface Props {
     title?: string
 }
 
-function CSPTemplate(csp: typeof MetadataConfig.csp) {
+function cspTemplate(csp: typeof MetadataConfig.csp) {
     const { base_uri, connect_src, form_action } = csp
 
     return `base-uri=${base_uri}, connect-src=${connect_src}, form-action=${form_action}`
@@ -27,7 +27,7 @@ const metadata = {
     basePath: MetadataConfig.base_path,
     canonicalURL: new URL(Astro.url.pathname, Astro.site),
     charset: MetadataConfig.charset,
-    csp: CSPTemplate(MetadataConfig.csp),
+    csp: cspTemplate(MetadataConfig.csp),
     description: Astro.props.description || MetadataConfig.description,
     faviconPath: MetadataConfig.favicon_path,
     faviconSVGPath: MetadataConfig.favicon_svg_path,
