@@ -3,7 +3,7 @@ import type { MenuItem } from "@blocs/navbar.astro"
 
 import Navbar from "@blocs/navbar.astro"
 import Noscript from "@blocs/noscript.astro"
-import BurgeriaUIHeader from "@components/header.astro"
+import AbstractHeader from "@components/abstract-header.astro"
 
 const menuItems: MenuItem[] = [
     { name: "Home", url: "/" },
@@ -11,7 +11,7 @@ const menuItems: MenuItem[] = [
 ]
 ---
 
-<BurgeriaUIHeader>
+<AbstractHeader>
     <Noscript slot="noscript" />
 
     <Navbar menuItems={menuItems}>
@@ -23,4 +23,4 @@ const menuItems: MenuItem[] = [
             /></a
         >
     </Navbar>
-</BurgeriaUIHeader>
+</AbstractHeader>
