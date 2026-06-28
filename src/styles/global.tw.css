@@ -7,7 +7,7 @@
 @plugin "@tailwindcss/forms";
 @plugin "tailwind-hamburgers";
 
-@layer design, layouts, pages, blocs, components, modifiers;
+@layer design, layouts, pages, blocs, components, important;
 
 @layer design {
     :root,
