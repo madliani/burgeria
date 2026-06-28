@@ -1,6 +1,6 @@
 @import "./config.tw.css";
 
-@layer design.geometry, design.themes, important;
+@layer design.geometry, design.themes.dark, design.themes.light, important;
 
 @layer design.geometry {
     .header {
@@ -27,8 +27,6 @@
 
 @layer design.themes {
     .body {
-        @apply bg-white;
-        @apply bg-[url("/images/prebuiltui-gradient-background.svg")] bg-cover;
         @apply font-[Playfair_Display_Variable];
     }
 
@@ -39,5 +37,12 @@
 
     .footer {
         @apply font-serif;
+    }
+}
+
+@layer design.themes.light {
+    .body {
+        @apply bg-white;
+        @apply bg-[url("/images/prebuiltui-gradient-background.svg")] bg-cover;
     }
 }
