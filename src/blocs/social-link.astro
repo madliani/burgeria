@@ -1,0 +1,52 @@
+---
+export type Social = "Facebook" | "Instagram" | "TikTok"
+
+interface Props {
+    href: string
+    social: Social
+}
+
+const { href, social } = Astro.props
+---
+
+{
+    social === "Facebook" ? (
+        <a
+            aria-label="Facebook link"
+            class="cursor-pointer"
+            href={href}
+            referrerpolicy="no-referrer"
+            rel="noopener"
+            target="_blank"
+            title="Facebook link"
+        >
+            <i class="fa-brands fa-facebook" />
+        </a>
+    ) : social === "Instagram" ? (
+        <a
+            aria-label="Instagram link"
+            class="cursor-pointer"
+            href={href}
+            referrerpolicy="no-referrer"
+            rel="noopener"
+            target="_blank"
+            title="Instagram link"
+        >
+            <i class="fa-brands fa-instagram" />
+        </a>
+    ) : social === "TikTok" ? (
+        <a
+            aria-label="TikTok link"
+            class="cursor-pointer"
+            href={href}
+            referrerpolicy="no-referrer"
+            rel="noopener"
+            target="_blank"
+            title="TikTok link"
+        >
+            <i class="fa-brands fa-tiktok" />
+        </a>
+    ) : (
+        <Fragment />
+    )
+}
