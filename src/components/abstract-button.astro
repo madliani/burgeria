@@ -10,7 +10,7 @@ const { className, href, id, title } = Astro.props
 ---
 
 {
-    href !== undefined ? (
+    typeof href === "string" ? (
         <a href={href}>
             <button class={className} id={id}>
                 <span>{title}</span>
