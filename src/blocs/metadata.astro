@@ -9,15 +9,29 @@ interface Props {
 }
 
 function cspTemplate(csp: typeof MetadataConfig.csp) {
-    const { base_uri, connect_src, form_action } = csp
+    const formattedCSP = []
 
-    return `base-uri=${base_uri}, connect-src=${connect_src}, form-action=${form_action}`
+    for (const [directive, sourceList] of Object.entries(csp)) {
+        const formattedDirective = directive.replace("_", "-")
+
+        formattedCSP.push(`${formattedDirective} '${sourceList}'`)
+    }
+
+    return formattedCSP.join("; ")
 }
 
 function viewportTemplate(viewport: typeof MetadataConfig.viewport) {
-    const { initial_scale, width } = viewport
+    const formattedViewport = []
 
-    return `initial-scale=${initial_scale.toFixed(1)}, width=${width}`
+    for (const [attr, value] of Object.entries(viewport)) {
+        const formattedAttr = attr.replace("_", "-")
+        const formattedValue =
+            typeof value === "number" ? value.toFixed(1) : value
+
+        formattedViewport.push(`${formattedAttr}=${formattedValue}`)
+    }
+
+    return formattedViewport.join(", ")
 }
 
 const metadata = {
