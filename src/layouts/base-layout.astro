@@ -5,6 +5,7 @@ import AbstractFooter from "@components/abstract-footer.astro"
 import AbstractHeader from "@components/abstract-header.astro"
 import AbstractLayout from "@components/abstract-layout.astro"
 import AbstractMain from "@components/abstract-main.astro"
+import AbstractNavbar from "@components/abstract-navbar.astro"
 import MetadataConfig from "@configurations/metadata.config.json"
 import "@styles/global.tw.css"
 import { ClientRouter } from "astro:transitions"
@@ -37,10 +38,10 @@ const menuItems: MenuItem[] = [
     <AbstractHeader>
         <Noscript slot="noscript" />
 
-        <nav
-            class="flex w-full flex-row flex-nowrap items-center justify-between px-7 py-5 align-middle text-xl"
+        <AbstractNavbar
+            className="flex w-full flex-row flex-nowrap items-center justify-between px-7 py-5 align-middle text-xl"
         >
-            <a href="/" slot="logo"
+            <a href="/"
                 ><img
                     alt="Burgeria logo"
                     src="/icons/burgeria-logo.png"
@@ -81,7 +82,7 @@ const menuItems: MenuItem[] = [
                     ))
                 }
             </ul>
-        </nav>
+        </AbstractNavbar>
     </AbstractHeader>
 
     <AbstractMain>
