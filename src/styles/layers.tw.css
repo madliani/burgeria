@@ -3,6 +3,9 @@
 @layer design.geometry {
     .header {
         @apply min-h-[10svh];
+        @apply px-7 py-5;
+        @apply flex flex-row flex-nowrap;
+        @apply items-center justify-around align-middle;
     }
 
     .noscript {
