@@ -1,12 +1,19 @@
 ---
-import HeroSection from "@blocs/hero-section.astro"
 import BaseLayout from "@layouts/base-layout.astro"
 ---
 
 <BaseLayout>
-    <HeroSection
-        btnText="View menu"
-        subtitle="The Fast Food Company"
-        title="Welcome to Burgeria"
-    />
+    <section
+        class="container flex flex-col flex-nowrap items-center justify-center gap-5 text-center"
+    >
+        <h1 class="text-5xl font-bold sm:text-7xl"> Welcome to Burgeria </h1>
+
+        <h2 class="text-3xl sm:text-5xl"> The Fast Food Company </h2>
+
+        <button
+            class="cursor-pointer rounded-full bg-[#FFD700] px-5 py-3 text-xl font-semibold text-white active:scale-98"
+        >
+            <a href="/">View menu</a>
+        </button>
+    </section>
 </BaseLayout>
