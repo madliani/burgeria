@@ -1,9 +1,9 @@
 ---
 import Footer from "@blocs/footer.astro"
 import Header from "@blocs/header.astro"
-import Main from "@blocs/main.astro"
 import Metadata from "@blocs/metadata.astro"
 import AbstractLayout from "@components/abstract-layout.astro"
+import AbstractMain from "@components/abstract-main.astro"
 import MetadataConfig from "@configurations/metadata.config.json"
 import "@styles/global.tw.css"
 import { ClientRouter } from "astro:transitions"
@@ -25,9 +25,9 @@ const { description = "", title = "" } = Astro.props
 
     <Header slot="header" />
 
-    <Main class="main">
+    <AbstractMain>
         <slot />
-    </Main>
+    </AbstractMain>
 
     <Footer
         authorName="Madliani Studio"
