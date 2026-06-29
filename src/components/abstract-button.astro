@@ -1,0 +1,23 @@
+---
+interface Props {
+    className?: string
+    href?: string
+    title: string
+}
+
+const { className, href, title } = Astro.props
+---
+
+{
+    href !== undefined ? (
+        <a href={href}>
+            <button class={className}>
+                <span>{title}</span>
+            </button>
+        </a>
+    ) : (
+        <button class={className}>
+            <span>{title}</span>
+        </button>
+    )
+}
