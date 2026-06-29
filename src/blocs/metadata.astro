@@ -8,6 +8,10 @@ interface Props {
     title?: string
 }
 
+function canonicalTemplate(pathname: string, site: undefined | URL) {
+    return new URL(pathname, site)
+}
+
 function cspTemplate(csp: typeof MetadataConfig.csp) {
     const formatCSP = ([directive, sourceList]: [string, string[]]) => {
         const formattedDirective = directive.replace("_", "-")
@@ -19,6 +23,14 @@ function cspTemplate(csp: typeof MetadataConfig.csp) {
     }
 
     return Object.entries(csp).map(formatCSP).join("; ")
+}
+
+function descTemplate(defaultDesc: string, desc: string | undefined) {
+    return desc || defaultDesc
+}
+
+function titleTemplate(defaultTitle: string, title: string | undefined) {
+    return title ? `${title} | ${defaultTitle}` : defaultTitle
 }
 
 function viewportTemplate(viewport: typeof MetadataConfig.viewport) {
@@ -37,10 +49,13 @@ const metadata = {
     atiPath: MetadataConfig.ati_path,
     author: MetadataConfig.author,
     basePath: MetadataConfig.base_path,
-    canonicalURL: new URL(Astro.url.pathname, Astro.site),
+    canonicalURL: canonicalTemplate(Astro.url.pathname, Astro.site),
     charset: MetadataConfig.charset,
     csp: cspTemplate(MetadataConfig.csp),
-    description: Astro.props.description || MetadataConfig.description,
+    description: descTemplate(
+        MetadataConfig.description,
+        Astro.props.description
+    ),
     faviconPath: MetadataConfig.favicon_path,
     faviconSVGPath: MetadataConfig.favicon_svg_path,
     generator: Astro.generator,
@@ -49,9 +64,7 @@ const metadata = {
     keywords: MetadataConfig.keywords,
     sitemapPath: MetadataConfig.sitemap_path,
     themeColor: MetadataConfig.theme_color,
-    title: Astro.props.title
-        ? `${Astro.props.title} | ${MetadataConfig.title}`
-        : MetadataConfig.title,
+    title: titleTemplate(MetadataConfig.title, Astro.props.title),
     viewport: viewportTemplate(MetadataConfig.viewport)
 }
 
