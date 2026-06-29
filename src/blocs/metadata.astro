@@ -15,7 +15,7 @@ function cspTemplate(csp: typeof MetadataConfig.csp) {
         const formattedDirective = directive.replace("_", "-")
         const formattedSourceList = sourceList.join(" ")
 
-        formattedCSP.push(`${formattedDirective} '${formattedSourceList}'`)
+        formattedCSP.push(`${formattedDirective} ${formattedSourceList}`)
     }
 
     return formattedCSP.join("; ")
