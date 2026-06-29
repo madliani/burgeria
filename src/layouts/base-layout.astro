@@ -37,12 +37,6 @@ const menuItems: MenuItem[] = [
         <ClientRouter />
     </Fragment>
 
-    <AbstractNoscript className="noscript">
-        For full functionality of this site it is necessary to <strong>
-            enable JavaScript
-        </strong>.
-    </AbstractNoscript>
-
     <AbstractHeader className="header">
         <AbstractLogo
             alt="Burgeria logo"
@@ -90,6 +84,12 @@ const menuItems: MenuItem[] = [
     </AbstractHeader>
 
     <AbstractMain className="main">
+        <AbstractNoscript className="noscript">
+            For full functionality of this site it is necessary to <strong>
+                enable JavaScript
+            </strong>.
+        </AbstractNoscript>
+
         <slot />
     </AbstractMain>
 
