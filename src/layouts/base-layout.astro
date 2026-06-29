@@ -1,6 +1,5 @@
 ---
 import Metadata from "@blocs/metadata.astro"
-import Navbar, { type MenuItem } from "@blocs/navbar.astro"
 import Noscript from "@blocs/noscript.astro"
 import AbstractFooter from "@components/abstract-footer.astro"
 import AbstractHeader from "@components/abstract-header.astro"
@@ -9,6 +8,11 @@ import AbstractMain from "@components/abstract-main.astro"
 import MetadataConfig from "@configurations/metadata.config.json"
 import "@styles/global.tw.css"
 import { ClientRouter } from "astro:transitions"
+
+interface MenuItem {
+    name: string
+    url: string
+}
 
 interface Props {
     description?: string
@@ -33,7 +37,9 @@ const menuItems: MenuItem[] = [
     <AbstractHeader>
         <Noscript slot="noscript" />
 
-        <Navbar menuItems={menuItems}>
+        <nav
+            class="flex w-full flex-row flex-nowrap items-center justify-between px-7 py-5 align-middle text-xl"
+        >
             <a href="/" slot="logo"
                 ><img
                     alt="Burgeria logo"
@@ -41,7 +47,41 @@ const menuItems: MenuItem[] = [
                     width="128px"
                 /></a
             >
-        </Navbar>
+
+            <ul
+                class="hidden sm:flex sm:flex-row sm:flex-nowrap sm:items-center sm:justify-evenly sm:gap-7 sm:align-middle"
+            >
+                {
+                    menuItems.map(({ name, url }) => (
+                        <li class="cursor-pointer hover:underline">
+                            <a href={url}>{name}</a>
+                        </li>
+                    ))
+                }
+            </ul>
+
+            <div
+                class="tham-w-6 tham-e-squeeze z-10 tham sm:hidden"
+                id="hamburger"
+            >
+                <div class="tham-box">
+                    <div class="tham-inner"></div>
+                </div>
+            </div>
+
+            <ul
+                class="absolute top-0 right-0 bottom-0 left-0 hidden w-full flex-col flex-nowrap items-start justify-start gap-3 bg-white bg-[url('/images/prebuiltui-gradient-background.svg')] bg-cover px-3 py-5 align-middle"
+                id="mobile-menu"
+            >
+                {
+                    menuItems.map(({ name, url }) => (
+                        <li class="cursor-pointer hover:underline">
+                            <a href={url}>{name}</a>
+                        </li>
+                    ))
+                }
+            </ul>
+        </nav>
     </AbstractHeader>
 
     <AbstractMain>
@@ -97,3 +137,30 @@ const menuItems: MenuItem[] = [
         </section>
     </AbstractFooter>
 </AbstractLayout>
+
+<script>
+    document.addEventListener("astro:page-load", () => {
+        const hamburger = document.getElementById("hamburger")
+        const mobileMenu = document.getElementById("mobile-menu")
+
+        const toggleHamburgerMenu = () => {
+            hamburger?.classList.toggle("tham-active")
+
+            mobileMenu?.classList.toggle("hidden")
+            mobileMenu?.classList.toggle("flex")
+        }
+
+        hamburger?.addEventListener("click", toggleHamburgerMenu)
+        mobileMenu?.addEventListener("click", toggleHamburgerMenu)
+
+        for (
+            let index = 0;
+            index <= (mobileMenu?.children.length ?? 0) - 1;
+            index++
+        ) {
+            const menuItem = mobileMenu?.children.item(index)
+
+            menuItem?.addEventListener("click", toggleHamburgerMenu)
+        }
+    })
+</script>
