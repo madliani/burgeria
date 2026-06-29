@@ -2,10 +2,11 @@
 interface Props {
     className?: string
     href?: string
+    id?: string
     title: string
 }
 
-const { className, href, title } = Astro.props
+const { className, href, id, title } = Astro.props
 ---
 
 {
@@ -16,7 +17,7 @@ const { className, href, title } = Astro.props
             </button>
         </a>
     ) : (
-        <button class={className}>
+        <button class={className} id={id}>
             <span>{title}</span>
         </button>
     )
