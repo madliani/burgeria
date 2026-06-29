@@ -35,9 +35,9 @@ const menuItems: MenuItem[] = [
         <ClientRouter />
     </Fragment>
 
-    <Noscript slot="noscript" />
+    <Noscript />
 
-    <AbstractHeader className="header" slot="header">
+    <AbstractHeader className="header">
         <a href="/"
             ><img
                 alt="Burgeria logo"
@@ -89,7 +89,7 @@ const menuItems: MenuItem[] = [
         <slot />
     </AbstractMain>
 
-    <AbstractFooter slot="footer">
+    <AbstractFooter>
         <slot name="logo" />
 
         <p class="w-full text-center italic"

@@ -14,12 +14,6 @@ const { className, lang } = Astro.props
     </head>
 
     <body class={className}>
-        <slot name="noscript" />
-
-        <slot name="header" />
-
         <slot />
-
-        <slot name="footer" />
     </body></html
 >
