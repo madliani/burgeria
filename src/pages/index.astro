@@ -1,5 +1,6 @@
 ---
 import AbstractButton from "@components/abstract-button.astro"
+import AbstractSubtitle from "@components/abstract-subtitle.astro"
 import AbstractTitle from "@components/abstract-title.astro"
 import BaseLayout from "@layouts/base-layout.astro"
 ---
@@ -12,7 +13,9 @@ import BaseLayout from "@layouts/base-layout.astro"
             Welcome to Burgeria
         </AbstractTitle>
 
-        <h2 class="text-3xl sm:text-5xl"> The Fast Food Company </h2>
+        <AbstractSubtitle className="text-3xl sm:text-5xl">
+            The Fast Food Company
+        </AbstractSubtitle>
 
         <AbstractButton
             className="cursor-pointer rounded-full bg-[#FFD700] px-5 py-3 text-xl font-semibold text-white active:scale-98"
