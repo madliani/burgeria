@@ -23,6 +23,7 @@ export default {
                 ],
                 severity: "error"
             }
-        ]
+        ],
+        "selector-class-pattern": null
     }
 }
