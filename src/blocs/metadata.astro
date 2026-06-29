@@ -9,32 +9,28 @@ interface Props {
 }
 
 function cspTemplate(csp: typeof MetadataConfig.csp) {
-    const formattedCSP = []
-
-    for (const [directive, sourceList] of Object.entries(csp)) {
+    const formatCSP = ([directive, sourceList]: [string, string[]]) => {
         const formattedDirective = directive.replace("_", "-")
         const formattedSourceList = sourceList
             .map(source => `'${source}'`)
             .join(" ")
 
-        formattedCSP.push(`${formattedDirective} ${formattedSourceList}`)
+        return `${formattedDirective} ${formattedSourceList}`
     }
 
-    return formattedCSP.join("; ")
+    return Object.entries(csp).map(formatCSP).join("; ")
 }
 
 function viewportTemplate(viewport: typeof MetadataConfig.viewport) {
-    const formattedViewport = []
-
-    for (const [attr, value] of Object.entries(viewport)) {
+    const formatViewport = ([attr, value]: [string, number | string]) => {
         const formattedAttr = attr.replace("_", "-")
         const formattedValue =
             typeof value === "number" ? value.toFixed(1) : value
 
-        formattedViewport.push(`${formattedAttr}=${formattedValue}`)
+        return `${formattedAttr}=${formattedValue}`
     }
 
-    return formattedViewport.join(", ")
+    return Object.entries(viewport).map(formatViewport).join(", ")
 }
 
 const metadata = {
