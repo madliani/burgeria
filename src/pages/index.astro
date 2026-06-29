@@ -1,13 +1,14 @@
 ---
 import AbstractButton from "@components/abstract-button.astro"
+import AbstractSection from "@components/abstract-section.astro"
 import AbstractSubtitle from "@components/abstract-subtitle.astro"
 import AbstractTitle from "@components/abstract-title.astro"
 import BaseLayout from "@layouts/base-layout.astro"
 ---
 
 <BaseLayout>
-    <section
-        class="container flex flex-col flex-nowrap items-center justify-center gap-5 text-center"
+    <AbstractSection
+        className="container flex flex-col flex-nowrap items-center justify-center gap-5 text-center"
     >
         <AbstractTitle className="text-5xl font-bold sm:text-7xl">
             Welcome to Burgeria
@@ -21,5 +22,5 @@ import BaseLayout from "@layouts/base-layout.astro"
             className="cursor-pointer rounded-full bg-[#FFD700] px-5 py-3 text-xl font-semibold text-white active:scale-98"
             title="View menu"
         />
-    </section>
+    </AbstractSection>
 </BaseLayout>
