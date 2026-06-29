@@ -12,7 +12,7 @@ const { className, href, id, title } = Astro.props
 {
     href !== undefined ? (
         <a href={href}>
-            <button class={className}>
+            <button class={className} id={id}>
                 <span>{title}</span>
             </button>
         </a>
