@@ -1,5 +1,6 @@
 ---
 import AbstractButton from "@components/abstract-button.astro"
+import AbstractTitle from "@components/abstract-title.astro"
 import BaseLayout from "@layouts/base-layout.astro"
 ---
 
@@ -7,7 +8,9 @@ import BaseLayout from "@layouts/base-layout.astro"
     <section
         class="container flex flex-col flex-nowrap items-center justify-center gap-5 text-center"
     >
-        <h1 class="text-5xl font-bold sm:text-7xl"> Welcome to Burgeria </h1>
+        <AbstractTitle className="text-5xl font-bold sm:text-7xl">
+            Welcome to Burgeria
+        </AbstractTitle>
 
         <h2 class="text-3xl sm:text-5xl"> The Fast Food Company </h2>
 
