@@ -1,12 +1,12 @@
 ---
 import Metadata from "@blocs/metadata.astro"
-import Noscript from "@blocs/noscript.astro"
 import SocialLink from "@blocs/social-link.astro"
 import AbstractFooter from "@components/abstract-footer.astro"
 import AbstractHeader from "@components/abstract-header.astro"
 import AbstractLayout from "@components/abstract-layout.astro"
 import AbstractMain from "@components/abstract-main.astro"
 import AbstractNavbar from "@components/abstract-navbar.astro"
+import AbstractNoscript from "@components/abstract-noscript.astro"
 import MetadataConfig from "@configurations/metadata.config.json"
 import "@styles/global.tw.css"
 import { ClientRouter } from "astro:transitions"
@@ -36,7 +36,11 @@ const menuItems: MenuItem[] = [
         <ClientRouter />
     </Fragment>
 
-    <Noscript />
+    <AbstractNoscript className="noscript">
+        For full functionality of this site it is necessary to <strong>
+            enable JavaScript
+        </strong>.
+    </AbstractNoscript>
 
     <AbstractHeader className="header">
         <a href="/"
