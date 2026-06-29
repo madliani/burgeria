@@ -8,7 +8,7 @@ interface Props {
     title?: string
 }
 
-function canonicalTemplate(pathname: string, site: undefined | URL) {
+function canonicalURLTemplate(pathname: string, site: undefined | URL) {
     return new URL(pathname, site)
 }
 
@@ -49,7 +49,7 @@ const metadata = {
     atiPath: MetadataConfig.ati_path,
     author: MetadataConfig.author,
     basePath: MetadataConfig.base_path,
-    canonicalURL: canonicalTemplate(Astro.url.pathname, Astro.site),
+    canonicalURL: canonicalURLTemplate(Astro.url.pathname, Astro.site),
     charset: MetadataConfig.charset,
     csp: cspTemplate(MetadataConfig.csp),
     description: descTemplate(
