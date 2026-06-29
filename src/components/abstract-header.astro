@@ -1,4 +1,12 @@
-<header class="header">
+---
+interface Props {
+    className?: string
+}
+
+const { className } = Astro.props
+---
+
+<header class={className}>
     <slot name="noscript" />
 
     <slot />
