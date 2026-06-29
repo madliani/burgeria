@@ -4,11 +4,12 @@ import SocialLink from "@blocs/social-link.astro"
 import AbstractFooter from "@components/abstract-footer.astro"
 import AbstractHeader from "@components/abstract-header.astro"
 import AbstractLayout from "@components/abstract-layout.astro"
+import AbstractLogo from "@components/abstract-logo.astro"
 import AbstractMain from "@components/abstract-main.astro"
 import AbstractNavbar from "@components/abstract-navbar.astro"
 import AbstractNoscript from "@components/abstract-noscript.astro"
-import MetadataConfig from "@configurations/metadata.config.json"
 import "@styles/global.tw.css"
+import MetadataConfig from "@configurations/metadata.config.json"
 import { ClientRouter } from "astro:transitions"
 
 interface MenuItem {
@@ -43,13 +44,11 @@ const menuItems: MenuItem[] = [
     </AbstractNoscript>
 
     <AbstractHeader className="header">
-        <a href="/"
-            ><img
-                alt="Burgeria logo"
-                src="/icons/burgeria-logo.png"
-                width="128px"
-            /></a
-        >
+        <AbstractLogo
+            alt="Burgeria logo"
+            href="/"
+            src="/icons/burgeria-logo.png"
+        />
 
         <AbstractNavbar
             className="flex w-full flex-row flex-nowrap items-center justify-end align-middle text-xl"
