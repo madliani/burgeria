@@ -3,7 +3,11 @@
     "author": "madliani",
     "base_path": "/",
     "charset": "utf-8",
-    "csp": { "base_uri": "self", "connect_src": "self", "form_action": "self" },
+    "csp": {
+        "base_uri": ["self"],
+        "connect_src": ["self"],
+        "form_action": ["self"]
+    },
     "description": "Burgeria is a fast food company. If you want a fast breakfast, fast lunch, or maybe fast dinner, Burgeria is your choice!",
     "favicon_path": "/icons/favicon.ico",
     "favicon_svg_path": "/icons/favicon.svg",
