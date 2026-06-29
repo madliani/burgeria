@@ -24,7 +24,7 @@
 }
 
 @layer design.themes {
-    .body {
+    .layout {
         @apply font-[Playfair_Display_Variable];
     }
 
@@ -39,7 +39,7 @@
 }
 
 @layer design.themes.light {
-    .body {
+    .layout {
         @apply bg-white;
         @apply bg-[url("/images/prebuiltui-gradient-background.svg")] bg-cover;
     }
