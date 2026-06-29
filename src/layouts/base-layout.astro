@@ -37,7 +37,7 @@ const menuItems: MenuItem[] = [
 
     <Noscript slot="noscript" />
 
-    <AbstractHeader className="header">
+    <AbstractHeader className="header" slot="header">
         <a href="/"
             ><img
                 alt="Burgeria logo"
@@ -89,7 +89,7 @@ const menuItems: MenuItem[] = [
         <slot />
     </AbstractMain>
 
-    <AbstractFooter>
+    <AbstractFooter slot="footer">
         <slot name="logo" />
 
         <p class="w-full text-center italic"
