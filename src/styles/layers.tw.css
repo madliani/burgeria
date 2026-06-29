@@ -32,7 +32,6 @@
     }
 
     .noscript {
-        @apply bg-red;
         @apply text-center text-xl;
     }
 
@@ -42,6 +41,10 @@
 }
 
 @layer design.themes.light {
+    .noscript {
+        @apply bg-red;
+    }
+
     .layout {
         @apply bg-white;
         @apply bg-[url("/images/prebuiltui-gradient-background.svg")] bg-cover;
