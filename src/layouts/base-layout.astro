@@ -7,8 +7,10 @@ import AbstractLayout from "@components/abstract-layout.astro"
 import AbstractLocalLink from "@components/abstract-local-link.astro"
 import AbstractLogo from "@components/abstract-logo.astro"
 import AbstractMain from "@components/abstract-main.astro"
-import AbstractNavbar from "@components/abstract-navbar.astro"
+import AbstractMenuItem from "@components/abstract-menu-item.astro"
 import "@styles/global.tw.css"
+import AbstractMenu from "@components/abstract-menu.astro"
+import AbstractNavbar from "@components/abstract-navbar.astro"
 import AbstractNoscript from "@components/abstract-noscript.astro"
 import MetadataConfig from "@configurations/metadata.config.json"
 import { ClientRouter } from "astro:transitions"
@@ -49,19 +51,19 @@ const menuItems: readonly MenuItem[] = [
         <AbstractNavbar
             className="flex w-full flex-row flex-nowrap items-center justify-end align-middle text-xl"
         >
-            <ul
-                class="hidden sm:flex sm:flex-row sm:flex-nowrap sm:items-center sm:justify-evenly sm:gap-7 sm:align-middle"
+            <AbstractMenu
+                className="hidden sm:flex sm:flex-row sm:flex-nowrap sm:items-center sm:justify-evenly sm:gap-7 sm:align-middle"
             >
                 {
                     menuItems.map(({ name, url }) => (
-                        <li class="cursor-pointer hover:underline">
+                        <AbstractMenuItem className="cursor-pointer hover:underline">
                             <AbstractLocalLink href={url}>
                                 {name}
                             </AbstractLocalLink>
-                        </li>
+                        </AbstractMenuItem>
                     ))
                 }
-            </ul>
+            </AbstractMenu>
 
             <div
                 class="tham-w-6 tham-e-squeeze z-10 tham sm:hidden"
@@ -72,8 +74,8 @@ const menuItems: readonly MenuItem[] = [
                 </div>
             </div>
 
-            <ul
-                class="absolute top-0 right-0 bottom-0 left-0 hidden w-full flex-col flex-nowrap items-start justify-start gap-3 bg-white bg-[url('/images/prebuiltui-gradient-background.svg')] bg-cover px-3 py-5 align-middle"
+            <AbstractMenu
+                className="absolute top-0 right-0 bottom-0 left-0 hidden w-full flex-col flex-nowrap items-start justify-start gap-3 bg-white bg-[url('/images/prebuiltui-gradient-background.svg')] bg-cover px-3 py-5 align-middle"
                 id="mobile-menu"
             >
                 {
@@ -85,7 +87,7 @@ const menuItems: readonly MenuItem[] = [
                         </li>
                     ))
                 }
-            </ul>
+            </AbstractMenu>
         </AbstractNavbar>
     </AbstractHeader>
 
