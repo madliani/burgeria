@@ -4,10 +4,11 @@ import AbstractBloc from "@components/abstract-bloc.astro"
 import AbstractFooter from "@components/abstract-footer.astro"
 import AbstractGlobalLink from "@components/abstract-global-link.astro"
 import AbstractHeader from "@components/abstract-header.astro"
+import AbstractIcon from "@components/abstract-icon.astro"
 import AbstractLayout from "@components/abstract-layout.astro"
 import AbstractLocalLink from "@components/abstract-local-link.astro"
-import AbstractLogo from "@components/abstract-logo.astro"
 import "@styles/global.tw.css"
+import AbstractLogo from "@components/abstract-logo.astro"
 import AbstractMain from "@components/abstract-main.astro"
 import AbstractMenuItem from "@components/abstract-menu-item.astro"
 import AbstractMenu from "@components/abstract-menu.astro"
@@ -118,15 +119,22 @@ const menuItems: readonly MenuItem[] = [
             <AbstractGlobalLink
                 href="https://facebook.com/"
                 title="Facebook link"
-            />
+                ><AbstractIcon
+                    className="fa-brands fa-facebook"
+                /></AbstractGlobalLink
+            >
             <AbstractGlobalLink
                 href="https://instagram.com/"
                 title="Instagram link"
-            />
-            <AbstractGlobalLink
-                href="https://tiktok.com/"
-                title="TikTok link"
-            />
+                ><AbstractIcon
+                    className="fa-brands fa-instagram"
+                /></AbstractGlobalLink
+            >
+            <AbstractGlobalLink href="https://tiktok.com/" title="TikTok link"
+                ><AbstractIcon
+                    className="fa-brands fa-tiktok"
+                /></AbstractGlobalLink
+            >
         </AbstractBloc>
     </AbstractFooter>
 </AbstractLayout>
