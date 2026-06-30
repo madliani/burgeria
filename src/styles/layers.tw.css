@@ -50,6 +50,10 @@
         @apply gap-3;
     }
 
+    .footer__legal-notice {
+        @apply w-full text-center italic;
+    }
+
     .footer__social-link-group {
         @apply flex w-full flex-row flex-nowrap;
         @apply items-center justify-center;
