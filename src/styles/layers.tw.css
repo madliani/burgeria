@@ -74,6 +74,10 @@
         @apply cursor-pointer hover:underline;
     }
 
+    .header__mobile-menu-item {
+        @apply cursor-pointer hover:underline;
+    }
+
     .main__noscript {
         @apply text-center text-xl;
     }
