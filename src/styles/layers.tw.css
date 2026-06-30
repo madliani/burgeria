@@ -1,4 +1,4 @@
-@layer design.geometry, design.themes.dark, design.themes.light, important;
+@layer design.geometry, design.themes.dark, design.themes.light, design.physics.animation, important;
 
 @layer design.geometry {
     .noscript {
@@ -41,6 +41,16 @@
         @apply min-h-[70svh];
         @apply flex flex-col flex-nowrap;
         @apply items-center justify-center align-middle;
+    }
+
+    .hero-section {
+        @apply container flex flex-col flex-nowrap;
+        @apply items-center justify-center;
+        @apply gap-5;
+    }
+
+    .hero-section__button {
+        @apply px-5 py-3;
     }
 
     .footer {
@@ -86,6 +96,22 @@
         @apply cursor-pointer hover:underline;
     }
 
+    .hero-section {
+        @apply text-center;
+    }
+
+    .hero-section__title {
+        @apply text-5xl font-bold sm:text-7xl;
+    }
+
+    .hero-section__subtitle {
+        @apply text-3xl sm:text-5xl;
+    }
+
+    .hero-section__button {
+        @apply cursor-pointer rounded-full text-xl font-semibold;
+    }
+
     .footer {
         @apply font-serif;
     }
@@ -104,5 +130,15 @@
     .header__mobile-menu {
         @apply bg-white;
         @apply bg-[url('/images/prebuiltui-gradient-background.svg')] bg-cover;
+    }
+
+    .hero-section__button {
+        @apply bg-[#FFD700] text-white;
+    }
+}
+
+@layer design.physics.animation {
+    .hero-section__button {
+        @apply active:scale-98;
     }
 }
