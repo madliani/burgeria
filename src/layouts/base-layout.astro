@@ -1,14 +1,15 @@
 ---
 import Metadata from "@blocs/metadata.astro"
 import SocialLink from "@blocs/social-link.astro"
+import AbstractBloc from "@components/abstract-bloc.astro"
 import AbstractFooter from "@components/abstract-footer.astro"
 import AbstractHeader from "@components/abstract-header.astro"
 import AbstractLayout from "@components/abstract-layout.astro"
 import AbstractLocalLink from "@components/abstract-local-link.astro"
 import AbstractLogo from "@components/abstract-logo.astro"
 import AbstractMain from "@components/abstract-main.astro"
-import AbstractMenuItem from "@components/abstract-menu-item.astro"
 import "@styles/global.tw.css"
+import AbstractMenuItem from "@components/abstract-menu-item.astro"
 import AbstractMenu from "@components/abstract-menu.astro"
 import AbstractNavbar from "@components/abstract-navbar.astro"
 import AbstractNoscript from "@components/abstract-noscript.astro"
@@ -66,14 +67,14 @@ const menuItems: readonly MenuItem[] = [
                 }
             </AbstractMenu>
 
-            <div
-                class="tham-w-6 tham-e-squeeze z-10 tham sm:hidden"
+            <AbstractBloc
+                className="tham-w-6 tham-e-squeeze z-10 tham sm:hidden"
                 id="hamburger"
             >
-                <div class="tham-box">
-                    <div class="tham-inner"></div>
-                </div>
-            </div>
+                <AbstractBloc className="tham-box">
+                    <AbstractBloc className="tham-inner" />
+                </AbstractBloc>
+            </AbstractBloc>
 
             <AbstractMenu
                 className="absolute top-0 right-0 bottom-0 left-0 hidden w-full flex-col flex-nowrap items-start justify-start gap-3 bg-white bg-[url('/images/prebuiltui-gradient-background.svg')] bg-cover px-3 py-5 align-middle"
