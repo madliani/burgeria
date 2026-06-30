@@ -39,7 +39,7 @@
         @apply items-center justify-center align-middle;
     }
 
-    .main__noscript {
+    .noscript {
         @apply inline-block w-full;
     }
 
@@ -78,7 +78,7 @@
         @apply cursor-pointer hover:underline;
     }
 
-    .main__noscript {
+    .noscript {
         @apply text-center text-xl;
     }
 
