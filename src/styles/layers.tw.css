@@ -133,7 +133,7 @@
     }
 
     .hero-section__button {
-        @apply bg-[gold] text-white;
+        @apply bg-gold text-white;
     }
 }
 
