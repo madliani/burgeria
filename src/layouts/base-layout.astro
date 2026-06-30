@@ -11,11 +11,11 @@ import "@styles/global.tw.css"
 import AbstractMain from "@components/abstract-main.astro"
 import AbstractMenuItem from "@components/abstract-menu-item.astro"
 import AbstractMenu from "@components/abstract-menu.astro"
+import AbstractMetadata from "@components/abstract-metadata.astro"
 import AbstractNavbar from "@components/abstract-navbar.astro"
 import AbstractNoscript from "@components/abstract-noscript.astro"
 import AbstractParagraph from "@components/abstract-paragraph.astro"
 import AbstractTextDecoration from "@components/abstract-text-decoration.astro"
-import Metadata from "@components/metadata.astro"
 import MetadataConfig from "@configurations/metadata.config.json"
 import { ClientRouter } from "astro:transitions"
 
@@ -39,7 +39,7 @@ const menuItems: readonly MenuItem[] = [
 
 <AbstractLayout className="layout" lang={MetadataConfig.language}>
     <Fragment slot="head">
-        <Metadata description={description} title={title} />
+        <AbstractMetadata description={description} title={title} />
 
         <ClientRouter />
     </Fragment>
