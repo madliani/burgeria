@@ -8,14 +8,14 @@
         @apply items-center justify-around align-middle;
     }
 
-    .noscript {
-        @apply inline-block w-full;
-    }
-
     .main {
         @apply min-h-[70svh];
         @apply flex flex-col flex-nowrap;
         @apply items-center justify-center align-middle;
+    }
+
+    .main__noscript {
+        @apply inline-block w-full;
     }
 
     .footer {
@@ -31,7 +31,7 @@
         @apply font-[Playfair_Display_Variable];
     }
 
-    .noscript {
+    .main__noscript {
         @apply text-center text-xl;
     }
 
