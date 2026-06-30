@@ -1,6 +1,6 @@
 ---
 import AbstractOpenGraph from "@components/abstract-open-graph.astro"
-import TwitterCard from "@components/twitter-card.astro"
+import AbstractTwitterCard from "@components/abstract-twitter-card.astro"
 import MetadataConfig from "@configurations/metadata.config.json"
 
 interface Props {
@@ -132,7 +132,7 @@ const twitterCardMetadata = {
     url={openGraphMetadata.url}
 />
 
-<TwitterCard
+<AbstractTwitterCard
     card={twitterCardMetadata.card}
     description={twitterCardMetadata.description}
     imagePath={twitterCardMetadata.imagePath}
