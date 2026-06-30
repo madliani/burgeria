@@ -56,7 +56,7 @@ const menuItems: readonly MenuItem[] = [
             <AbstractMenu className="header__menu">
                 {
                     menuItems.map(({ name, url }) => (
-                        <AbstractMenuItem className="cursor-pointer hover:underline">
+                        <AbstractMenuItem className="header__menu-item">
                             <AbstractLocalLink href={url}>
                                 {name}
                             </AbstractLocalLink>

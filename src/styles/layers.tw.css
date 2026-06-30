@@ -70,6 +70,10 @@
         @apply text-xl;
     }
 
+    .header__menu-item {
+        @apply cursor-pointer hover:underline;
+    }
+
     .main__noscript {
         @apply text-center text-xl;
     }
