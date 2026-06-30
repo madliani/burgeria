@@ -122,24 +122,28 @@ const menuItems: readonly MenuItem[] = [
         const hamburger = document.getElementById("hamburger")
         const mobileMenu = document.getElementById("mobile-menu")
 
-        const toggleHamburgerMenu = () => {
-            hamburger?.classList.toggle("tham-active")
+        if (hamburger !== null && mobileMenu !== null) {
+            const toggleHamburgerMenu = () => {
+                hamburger.classList.toggle("tham-active")
 
-            mobileMenu?.classList.toggle("hidden")
-            mobileMenu?.classList.toggle("flex")
-        }
+                mobileMenu.classList.toggle("hidden")
+                mobileMenu.classList.toggle("flex")
+            }
 
-        hamburger?.addEventListener("click", toggleHamburgerMenu)
-        mobileMenu?.addEventListener("click", toggleHamburgerMenu)
+            hamburger.addEventListener("click", toggleHamburgerMenu)
+            mobileMenu.addEventListener("click", toggleHamburgerMenu)
 
-        for (
-            let index = 0;
-            index <= (mobileMenu?.children.length ?? 0) - 1;
-            index++
-        ) {
-            const menuItem = mobileMenu?.children.item(index)
+            for (
+                let index = 0;
+                index <= (mobileMenu.children.length ?? 0) - 1;
+                index++
+            ) {
+                const menuItem = mobileMenu.children.item(index)
 
-            menuItem?.addEventListener("click", toggleHamburgerMenu)
+                if (menuItem !== null) {
+                    menuItem.addEventListener("click", toggleHamburgerMenu)
+                }
+            }
         }
     })
 </script>
