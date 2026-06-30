@@ -55,7 +55,9 @@ const menuItems: readonly MenuItem[] = [
                 {
                     menuItems.map(({ name, url }) => (
                         <li class="cursor-pointer hover:underline">
-                            <a href={url}>{name}</a>
+                            <AbstractLocalLink href={url}>
+                                {name}
+                            </AbstractLocalLink>
                         </li>
                     ))
                 }
@@ -77,7 +79,9 @@ const menuItems: readonly MenuItem[] = [
                 {
                     menuItems.map(({ name, url }) => (
                         <li class="cursor-pointer hover:underline">
-                            <a href={url}>{name}</a>
+                            <AbstractLocalLink href={url}>
+                                {name}
+                            </AbstractLocalLink>
                         </li>
                     ))
                 }
