@@ -1,0 +1,37 @@
+---
+interface Props {
+    className?: string
+    href: string
+    newTab?: boolean
+    title?: string
+}
+
+const { className, href, newTab, title } = Astro.props
+---
+
+{
+    newTab ? (
+        <a
+            aria-label={title}
+            class={className}
+            href={href}
+            referrerpolicy="no-referrer"
+            rel="noopener noreferrer"
+            target="_blank"
+            title={title}
+        >
+            <slot />
+        </a>
+    ) : (
+        <a
+            aria-label={title}
+            class={className}
+            href={href}
+            referrerpolicy="no-referrer"
+            rel="noopener noreferrer"
+            title={title}
+        >
+            <slot />
+        </a>
+    )
+}
