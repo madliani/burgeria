@@ -1,0 +1,90 @@
+---
+import AbstractBloc from "@components/abstract-bloc.astro"
+import AbstractHeader from "@components/abstract-header.astro"
+import AbstractLocalLink from "@components/abstract-local-link.astro"
+import AbstractLogo from "@components/abstract-logo.astro"
+import AbstractMenuItem from "@components/abstract-menu-item.astro"
+import AbstractMenu from "@components/abstract-menu.astro"
+import AbstractNavbar from "@components/abstract-navbar.astro"
+
+interface MenuItem {
+    name: string
+    url: string
+}
+
+const menuItems: readonly MenuItem[] = [
+    { name: "Home", url: "/" },
+    { name: "Menu", url: "/" }
+]
+---
+
+<AbstractHeader className="header">
+    <AbstractLocalLink href="/">
+        <AbstractLogo
+            alt="Burgeria logo"
+            src="/icons/burgeria-logo.png"
+        /></AbstractLocalLink
+    >
+
+    <AbstractNavbar className="header__navbar">
+        <AbstractMenu className="header__menu">
+            {
+                menuItems.map(({ name, url }) => (
+                    <AbstractMenuItem className="header__menu-item">
+                        <AbstractLocalLink href={url}>{name}</AbstractLocalLink>
+                    </AbstractMenuItem>
+                ))
+            }
+        </AbstractMenu>
+
+        <AbstractBloc
+            className="header__hamburger tham-w-6 tham-e-squeeze z-10 tham"
+            id="hamburger"
+        >
+            <AbstractBloc className="tham-box">
+                <AbstractBloc className="tham-inner" />
+            </AbstractBloc>
+        </AbstractBloc>
+
+        <AbstractMenu className="header__mobile-menu" id="mobile-menu">
+            {
+                menuItems.map(({ name, url }) => (
+                    <AbstractMenuItem className="header__mobile-menu-item">
+                        <AbstractLocalLink href={url}>{name}</AbstractLocalLink>
+                    </AbstractMenuItem>
+                ))
+            }
+        </AbstractMenu>
+    </AbstractNavbar>
+</AbstractHeader>
+
+<script>
+    document.addEventListener("astro:page-load", () => {
+        const hamburger = document.getElementById("hamburger")
+        const mobileMenu = document.getElementById("mobile-menu")
+
+        if (hamburger !== null && mobileMenu !== null) {
+            const toggleHamburgerMenu = () => {
+                hamburger.classList.toggle("tham-active")
+
+                mobileMenu.classList.toggle("hidden")
+                mobileMenu.classList.toggle("flex")
+            }
+
+            hamburger.addEventListener("click", toggleHamburgerMenu)
+            mobileMenu.addEventListener("click", toggleHamburgerMenu)
+
+            for (
+                let index = 0;
+                index <= (mobileMenu.children.length ?? 0) - 1;
+                index++
+            ) {
+                const menuItem = mobileMenu.children.item(index)
+
+                if (menuItem !== null) {
+                    menuItem.addEventListener("click", toggleHamburgerMenu)
+                }
+            }
+        }
+    })
+</script>
