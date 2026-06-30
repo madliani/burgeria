@@ -14,6 +14,7 @@ import AbstractMenu from "@components/abstract-menu.astro"
 import AbstractNavbar from "@components/abstract-navbar.astro"
 import AbstractNoscript from "@components/abstract-noscript.astro"
 import AbstractParagraph from "@components/abstract-paragraph.astro"
+import AbstractTextDecoration from "@components/abstract-text-decoration.astro"
 import MetadataConfig from "@configurations/metadata.config.json"
 import { ClientRouter } from "astro:transitions"
 
@@ -95,9 +96,11 @@ const menuItems: readonly MenuItem[] = [
 
     <AbstractMain className="main">
         <AbstractNoscript className="main__noscript">
-            For full functionality of this site it is necessary to <strong>
+            For full functionality of this site it is necessary to <AbstractTextDecoration
+                className="font-bold"
+            >
                 enable JavaScript
-            </strong>.
+            </AbstractTextDecoration>.
         </AbstractNoscript>
 
         <slot />
