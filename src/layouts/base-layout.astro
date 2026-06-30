@@ -1,14 +1,10 @@
 ---
+import BaseFooter from "@blocs/base-footer.astro"
 import BaseHeader from "@blocs/base-header.astro"
-import AbstractBloc from "@components/abstract-bloc.astro"
-import AbstractFooter from "@components/abstract-footer.astro"
-import AbstractGlobalLink from "@components/abstract-global-link.astro"
-import AbstractIcon from "@components/abstract-icon.astro"
 import AbstractLayout from "@components/abstract-layout.astro"
 import AbstractMain from "@components/abstract-main.astro"
 import AbstractMetadata from "@components/abstract-metadata.astro"
 import AbstractNoscript from "@components/abstract-noscript.astro"
-import AbstractParagraph from "@components/abstract-paragraph.astro"
 import AbstractTextDecoration from "@components/abstract-text-decoration.astro"
 import MetadataConfig from "@configurations/metadata.config.json"
 import "@styles/global.tw.css"
@@ -43,32 +39,5 @@ const { description = "", title = "" } = Astro.props
         <slot />
     </AbstractMain>
 
-    <AbstractFooter>
-        <AbstractParagraph className="footer__legal-notice"
-            >Copyright © {new Date().getUTCFullYear()}{" "}
-            Madliani Studio. All Rights Reserved.</AbstractParagraph
-        >
-
-        <AbstractBloc className="footer__social-link-group">
-            <AbstractGlobalLink
-                href="https://facebook.com/"
-                title="Facebook link"
-                ><AbstractIcon
-                    className="fa-brands fa-facebook"
-                /></AbstractGlobalLink
-            >
-            <AbstractGlobalLink
-                href="https://instagram.com/"
-                title="Instagram link"
-                ><AbstractIcon
-                    className="fa-brands fa-instagram"
-                /></AbstractGlobalLink
-            >
-            <AbstractGlobalLink href="https://tiktok.com/" title="TikTok link"
-                ><AbstractIcon
-                    className="fa-brands fa-tiktok"
-                /></AbstractGlobalLink
-            >
-        </AbstractBloc>
-    </AbstractFooter>
+    <BaseFooter />
 </AbstractLayout>
