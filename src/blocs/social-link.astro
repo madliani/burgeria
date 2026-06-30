@@ -1,5 +1,6 @@
 ---
 import AbstractGlobalLink from "@components/abstract-global-link.astro"
+import AbstractIcon from "@components/abstract-icon.astro"
 
 export type Social = "Facebook" | "Instagram" | "TikTok"
 
@@ -19,7 +20,7 @@ const { href, social } = Astro.props
             newTab={true}
             title="Facebook link"
         >
-            <i class="fa-brands fa-facebook" />
+            <AbstractIcon className="fa-brands fa-facebook" />
         </AbstractGlobalLink>
     ) : social === "Instagram" ? (
         <AbstractGlobalLink
@@ -28,7 +29,7 @@ const { href, social } = Astro.props
             newTab={true}
             title="Instagram link"
         >
-            <i class="fa-brands fa-instagram" />
+            <AbstractIcon className="fa-brands fa-instagram" />
         </AbstractGlobalLink>
     ) : social === "TikTok" ? (
         <AbstractGlobalLink
@@ -37,7 +38,7 @@ const { href, social } = Astro.props
             newTab={true}
             title="TikTok link"
         >
-            <i class="fa-brands fa-tiktok" />
+            <AbstractIcon className="fa-brands fa-tiktok" />
         </AbstractGlobalLink>
     ) : (
         <Fragment />
