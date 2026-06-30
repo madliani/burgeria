@@ -9,7 +9,8 @@
     }
 
     .header__navbar {
-        @apply flex w-full flex-row flex-nowrap;
+        @apply w-full;
+        @apply flex flex-row flex-nowrap;
         @apply items-center justify-end align-middle;
     }
 
