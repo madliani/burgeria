@@ -2,11 +2,10 @@
 interface Props {
     alt: string
     className?: string
-    href: string
     src: string
 }
 
-const { alt, className, href, src } = Astro.props
+const { alt, className, src } = Astro.props
 ---
 
-<a href={href}><img alt={alt} class={className} src={src} width="128px" /></a>
+<img alt={alt} class={className} src={src} width="128px" />
