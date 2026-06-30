@@ -1,14 +1,14 @@
 ---
 import Metadata from "@blocs/metadata.astro"
-import SocialLink from "@blocs/social-link.astro"
 import AbstractBloc from "@components/abstract-bloc.astro"
 import AbstractFooter from "@components/abstract-footer.astro"
+import AbstractGlobalLink from "@components/abstract-global-link.astro"
 import AbstractHeader from "@components/abstract-header.astro"
 import AbstractLayout from "@components/abstract-layout.astro"
 import AbstractLocalLink from "@components/abstract-local-link.astro"
 import AbstractLogo from "@components/abstract-logo.astro"
-import AbstractMain from "@components/abstract-main.astro"
 import "@styles/global.tw.css"
+import AbstractMain from "@components/abstract-main.astro"
 import AbstractMenuItem from "@components/abstract-menu-item.astro"
 import AbstractMenu from "@components/abstract-menu.astro"
 import AbstractNavbar from "@components/abstract-navbar.astro"
@@ -115,9 +115,18 @@ const menuItems: readonly MenuItem[] = [
         <AbstractBloc
             className="flex w-full flex-row flex-nowrap items-center justify-center gap-3"
         >
-            <SocialLink href="https://facebook.com/" social="Facebook" />
-            <SocialLink href="https://instagram.com/" social="Instagram" />
-            <SocialLink href="https://tiktok.com/" social="TikTok" />
+            <AbstractGlobalLink
+                href="https://facebook.com/"
+                title="Facebook link"
+            />
+            <AbstractGlobalLink
+                href="https://instagram.com/"
+                title="Instagram link"
+            />
+            <AbstractGlobalLink
+                href="https://tiktok.com/"
+                title="TikTok link"
+            />
         </AbstractBloc>
     </AbstractFooter>
 </AbstractLayout>
