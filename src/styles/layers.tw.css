@@ -70,6 +70,10 @@
         @apply text-center text-xl;
     }
 
+    .noscript__main-info--text-bold {
+        @apply font-bold;
+    }
+
     .header__navbar {
         @apply text-xl;
     }
