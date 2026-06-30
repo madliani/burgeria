@@ -1,6 +1,10 @@
 @layer design.geometry, design.themes.dark, design.themes.light, important;
 
 @layer design.geometry {
+    .noscript {
+        @apply inline-block w-full;
+    }
+
     .header {
         @apply min-h-[10svh];
         @apply px-7 py-5;
@@ -39,10 +43,6 @@
         @apply items-center justify-center align-middle;
     }
 
-    .noscript {
-        @apply inline-block w-full;
-    }
-
     .footer {
         @apply min-h-[20svh];
         @apply flex w-full flex-col flex-nowrap;
@@ -66,6 +66,10 @@
         @apply font-[Playfair_Display_Variable];
     }
 
+    .noscript {
+        @apply text-center text-xl;
+    }
+
     .header__navbar {
         @apply text-xl;
     }
@@ -76,10 +80,6 @@
 
     .header__mobile-menu-item {
         @apply cursor-pointer hover:underline;
-    }
-
-    .noscript {
-        @apply text-center text-xl;
     }
 
     .footer {
