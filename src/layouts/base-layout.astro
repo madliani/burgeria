@@ -12,6 +12,7 @@ import "@styles/global.tw.css"
 import AbstractMenu from "@components/abstract-menu.astro"
 import AbstractNavbar from "@components/abstract-navbar.astro"
 import AbstractNoscript from "@components/abstract-noscript.astro"
+import AbstractParagraph from "@components/abstract-paragraph.astro"
 import MetadataConfig from "@configurations/metadata.config.json"
 import { ClientRouter } from "astro:transitions"
 
@@ -102,9 +103,9 @@ const menuItems: readonly MenuItem[] = [
     </AbstractMain>
 
     <AbstractFooter>
-        <p class="w-full text-center italic"
+        <AbstractParagraph className="w-full text-center italic"
             >Copyright © {new Date().getUTCFullYear()}{" "}
-            Madliani Studio. All Rights Reserved.</p
+            Madliani Studio. All Rights Reserved.</AbstractParagraph
         >
 
         <section
