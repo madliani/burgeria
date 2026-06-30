@@ -1,11 +1,10 @@
 ---
 import BaseFooter from "@blocs/base-footer.astro"
 import BaseHeader from "@blocs/base-header.astro"
+import BaseNoscript from "@blocs/base-noscript.astro"
 import AbstractLayout from "@components/abstract-layout.astro"
 import AbstractMain from "@components/abstract-main.astro"
 import AbstractMetadata from "@components/abstract-metadata.astro"
-import AbstractNoscript from "@components/abstract-noscript.astro"
-import AbstractTextDecoration from "@components/abstract-text-decoration.astro"
 import MetadataConfig from "@configurations/metadata.config.json"
 import "@styles/global.tw.css"
 import { ClientRouter } from "astro:transitions"
@@ -28,13 +27,7 @@ const { description = "", title = "" } = Astro.props
     <BaseHeader />
 
     <AbstractMain className="main">
-        <AbstractNoscript className="noscript">
-            For full functionality of this site it is necessary to <AbstractTextDecoration
-                className="noscript__main-info"
-            >
-                enable JavaScript
-            </AbstractTextDecoration>.
-        </AbstractNoscript>
+        <BaseNoscript />
 
         <slot />
     </AbstractMain>
