@@ -1,21 +1,8 @@
 ---
-import AbstractButton from "@components/abstract-button.astro"
-import AbstractSection from "@components/abstract-section.astro"
-import AbstractSubtitle from "@components/abstract-subtitle.astro"
-import AbstractTitle from "@components/abstract-title.astro"
+import HomeHeroSection from "@blocs/home-hero-section.astro"
 import BaseLayout from "@layouts/base-layout.astro"
 ---
 
 <BaseLayout>
-    <AbstractSection className="hero-section">
-        <AbstractTitle className="hero-section__title">
-            Welcome to Burgeria
-        </AbstractTitle>
-
-        <AbstractSubtitle className="hero-section__subtitle">
-            The Fast Food Company
-        </AbstractSubtitle>
-
-        <AbstractButton className="hero-section__button" title="View menu" />
-    </AbstractSection>
+    <HomeHeroSection />
 </BaseLayout>
