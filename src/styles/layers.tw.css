@@ -8,6 +8,30 @@
         @apply items-center justify-around align-middle;
     }
 
+    .header__navbar {
+        @apply flex w-full flex-row flex-nowrap;
+        @apply items-center justify-end align-middle;
+    }
+
+    .header__menu {
+        @apply hidden;
+        @apply sm:flex sm:flex-row sm:flex-nowrap;
+        @apply sm:items-center sm:justify-evenly sm:align-middle;
+        @apply sm:gap-7;
+    }
+
+    .header__hamburger {
+        @apply sm:hidden;
+    }
+
+    .header__mobile-menu {
+        @apply absolute top-0 right-0 bottom-0 left-0;
+        @apply hidden w-full px-3 py-5;
+        @apply flex-col flex-nowrap;
+        @apply items-start justify-start align-middle;
+        @apply gap-3;
+    }
+
     .main {
         @apply min-h-[70svh];
         @apply flex flex-col flex-nowrap;
@@ -24,11 +48,21 @@
         @apply items-center justify-end align-middle;
         @apply gap-3;
     }
+
+    .footer__social-link-group {
+        @apply flex w-full flex-row flex-nowrap;
+        @apply items-center justify-center;
+        @apply gap-3;
+    }
 }
 
 @layer design.themes {
     .layout {
         @apply font-[Playfair_Display_Variable];
+    }
+
+    .header__navbar {
+        @apply text-xl;
     }
 
     .main__noscript {
@@ -48,5 +82,10 @@
     .layout {
         @apply bg-white;
         @apply bg-[url("/images/prebuiltui-gradient-background.svg")] bg-cover;
+    }
+
+    .header__mobile-menu {
+        @apply bg-white;
+        @apply bg-[url('/images/prebuiltui-gradient-background.svg')] bg-cover;
     }
 }

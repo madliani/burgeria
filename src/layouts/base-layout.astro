@@ -52,12 +52,8 @@ const menuItems: readonly MenuItem[] = [
             /></AbstractLocalLink
         >
 
-        <AbstractNavbar
-            className="flex w-full flex-row flex-nowrap items-center justify-end align-middle text-xl"
-        >
-            <AbstractMenu
-                className="hidden sm:flex sm:flex-row sm:flex-nowrap sm:items-center sm:justify-evenly sm:gap-7 sm:align-middle"
-            >
+        <AbstractNavbar className="header__navbar">
+            <AbstractMenu className="header__menu">
                 {
                     menuItems.map(({ name, url }) => (
                         <AbstractMenuItem className="cursor-pointer hover:underline">
@@ -70,7 +66,7 @@ const menuItems: readonly MenuItem[] = [
             </AbstractMenu>
 
             <AbstractBloc
-                className="tham-w-6 tham-e-squeeze z-10 tham sm:hidden"
+                className="header__hamburger tham-w-6 tham-e-squeeze z-10 tham"
                 id="hamburger"
             >
                 <AbstractBloc className="tham-box">
@@ -78,10 +74,7 @@ const menuItems: readonly MenuItem[] = [
                 </AbstractBloc>
             </AbstractBloc>
 
-            <AbstractMenu
-                className="absolute top-0 right-0 bottom-0 left-0 hidden w-full flex-col flex-nowrap items-start justify-start gap-3 bg-white bg-[url('/images/prebuiltui-gradient-background.svg')] bg-cover px-3 py-5 align-middle"
-                id="mobile-menu"
-            >
+            <AbstractMenu className="header__mobile-menu" id="mobile-menu">
                 {
                     menuItems.map(({ name, url }) => (
                         <AbstractMenuItem className="cursor-pointer hover:underline">
@@ -113,9 +106,7 @@ const menuItems: readonly MenuItem[] = [
             Madliani Studio. All Rights Reserved.</AbstractParagraph
         >
 
-        <AbstractBloc
-            className="flex w-full flex-row flex-nowrap items-center justify-center gap-3"
-        >
+        <AbstractBloc className="footer__social-link-group">
             <AbstractGlobalLink
                 href="https://facebook.com/"
                 title="Facebook link"
