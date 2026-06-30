@@ -24,7 +24,7 @@ interface Props {
 
 const { description = "", title = "" } = Astro.props
 
-const menuItems: MenuItem[] = [
+const menuItems: readonly MenuItem[] = [
     { name: "Home", url: "/" },
     { name: "Menu", url: "/" }
 ]
