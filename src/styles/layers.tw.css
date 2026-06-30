@@ -80,7 +80,7 @@
         @apply text-center text-xl;
     }
 
-    .noscript__main-info--text-bold {
+    .noscript__main-info {
         @apply font-bold;
     }
 
