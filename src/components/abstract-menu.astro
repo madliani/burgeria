@@ -1,12 +1,13 @@
 ---
 interface Props {
     className?: string
+    id?: string
     title?: string
 }
 
-const { className, title } = Astro.props
+const { className, id, title } = Astro.props
 ---
 
-<ul aria-label={title} class={className} title={title}>
+<ul aria-label={title} class={className} id={id} title={title}>
     <slot />
 </ul>
