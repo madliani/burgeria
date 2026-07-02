@@ -46,10 +46,7 @@ const menuItems: readonly MenuItem[] = [
             </AbstractBloc>
         </AbstractBloc>
 
-        <AbstractMenu
-            className="header__mobile-menu header__mobile-menu--hidden"
-            id="mobile-menu"
-        >
+        <AbstractMenu className="header__mobile-menu" id="mobile-menu">
             {
                 menuItems.map(({ name, url }) => (
                     <AbstractMenuItem className="header__mobile-menu-item">
@@ -70,7 +67,6 @@ const menuItems: readonly MenuItem[] = [
             const toggleHamburgerMenu = () => {
                 hamburger.classList.toggle("tham-active")
 
-                mobileMenu.classList.toggle("header__mobile-menu--hidden")
                 mobileMenu.classList.toggle("header__mobile-menu--unhidden")
             }
 
