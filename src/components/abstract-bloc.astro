@@ -4,9 +4,9 @@ interface Props {
     id?: string
 }
 
-const { className } = Astro.props
+const { className, id } = Astro.props
 ---
 
-<div class={className}>
+<div class={className} id={id}>
     <slot />
 </div>
