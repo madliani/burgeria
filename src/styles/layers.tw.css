@@ -31,10 +31,18 @@
 
     .header__mobile-menu {
         @apply absolute top-0 right-0 bottom-0 left-0;
-        @apply hidden w-full px-3 py-5;
+        @apply w-full px-3 py-5;
         @apply flex-col flex-nowrap;
         @apply items-start justify-start align-middle;
         @apply gap-3;
+    }
+
+    .header__mobile-menu--hidden {
+        @apply hidden;
+    }
+
+    .header__mobile-menu--unhidden {
+        @apply flex;
     }
 
     .main {
