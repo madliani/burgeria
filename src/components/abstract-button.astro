@@ -12,13 +12,13 @@ const { className, href, id, title } = Astro.props
 {
     typeof href === "string" ? (
         <a href={href}>
-            <button class={className} id={id}>
-                <span>{title}</span>
+            <button aria-label={title} class={className} id={id} title={title}>
+                <slot />
             </button>
         </a>
     ) : (
-        <button class={className} id={id}>
-            <span>{title}</span>
+        <button aria-label={title} class={className} id={id} title={title}>
+            <slot />
         </button>
     )
 }
