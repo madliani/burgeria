@@ -1,6 +1,24 @@
+.layout {
+    font-family: "Playfair Display Variable", sans-serif, serif;
+    background: url("/images/prebuiltui-gradient-background.svg");
+    background-color: #fff;
+    background-size: cover;
+}
+
 .noscript {
     display: inline-block;
+
     width: 100%;
+
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    text-align: center;
+
+    background-color: red;
+}
+
+.noscript__main-info {
+    font-weight: 700;
 }
 
 .header {
@@ -23,6 +41,8 @@
 
     width: 100%;
 
+    font-size: 1.25rem;
+    line-height: 1.75rem;
     vertical-align: middle;
 }
 
@@ -37,6 +57,14 @@
         justify-content: space-evenly;
 
         vertical-align: middle;
+    }
+}
+
+.header__menu-item {
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
     }
 }
 
@@ -62,10 +90,22 @@
     padding: 1.25rem 0.75rem;
 
     vertical-align: middle;
+
+    background: url("/images/prebuiltui-gradient-background.svg");
+    background-color: #fff;
+    background-size: cover;
 }
 
 .header__mobile-menu--unhidden {
     display: flex;
+}
+
+.header__mobile-menu-item {
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .main {
@@ -103,6 +143,7 @@
     width: 100%;
     min-height: 20svh;
 
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
     vertical-align: middle;
 }
 
@@ -120,41 +161,6 @@
     justify-content: center;
 
     width: 100%;
-}
-
-.layout {
-    font-family: "Playfair Display Variable", sans-serif, serif;
-}
-
-.noscript {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    text-align: center;
-}
-
-.noscript__main-info {
-    font-weight: 700;
-}
-
-.header__navbar {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-}
-
-.header__menu-item {
-    cursor: pointer;
-
-    &:hover {
-        text-decoration: underline;
-    }
-}
-
-.header__mobile-menu-item {
-    cursor: pointer;
-
-    &:hover {
-        text-decoration: underline;
-    }
 }
 
 .hero-section {
@@ -190,34 +196,10 @@
     font-size: 1.25rem;
     font-weight: 600;
     line-height: 1.75rem;
-}
-
-.footer {
-    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-}
-
-.noscript {
-    background-color: red;
-}
-
-.layout {
-    background: url("/images/prebuiltui-gradient-background.svg");
-    background-color: #fff;
-    background-size: cover;
-}
-
-.header__mobile-menu {
-    background: url("/images/prebuiltui-gradient-background.svg");
-    background-color: #fff;
-    background-size: cover;
-}
-
-.hero-section__button {
     color: #fff;
-    background-color: gold;
-}
 
-.hero-section__button {
+    background-color: gold;
+
     &:active {
         transform: scale(0.98);
     }
