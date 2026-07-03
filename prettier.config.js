@@ -1,5 +1,5 @@
 /**
- * @type {import("prettier").Config & import("prettier-plugin-tailwindcss").PluginOptions}
+ * @type {import("prettier").Config}
  */
 export default {
     arrowParens: "avoid",
@@ -9,11 +9,7 @@ export default {
     endOfLine: "lf",
     htmlWhitespaceSensitivity: "strict",
     objectWrap: "collapse",
-    plugins: [
-        "prettier-plugin-astro",
-        "prettier-plugin-svelte",
-        "prettier-plugin-tailwindcss"
-    ],
+    plugins: ["prettier-plugin-astro", "prettier-plugin-svelte"],
     printWidth: 80,
     proseWrap: "always",
     quoteProps: "as-needed",
@@ -21,7 +17,6 @@ export default {
     singleAttributePerLine: false,
     singleQuote: false,
     tabWidth: 4,
-    tailwindStylesheet: "./src/styles/config.tw.css",
     trailingComma: "none",
     useTabs: false
 }

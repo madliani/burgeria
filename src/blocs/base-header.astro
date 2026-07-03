@@ -38,11 +38,11 @@ const menuItems: readonly MenuItem[] = [
         </AbstractMenu>
 
         <AbstractBloc
-            className="header__hamburger tham-w-6 tham-e-squeeze tham"
+            className="header__hamburger hamburger hamburger--collapse"
             id="hamburger"
         >
-            <AbstractBloc className="tham-box">
-                <AbstractBloc className="tham-inner" />
+            <AbstractBloc className="hamburger-box">
+                <AbstractBloc className="hamburger-inner" />
             </AbstractBloc>
         </AbstractBloc>
 
@@ -65,7 +65,7 @@ const menuItems: readonly MenuItem[] = [
 
         if (hamburger !== null && mobileMenu !== null) {
             const toggleHamburgerMenu = () => {
-                hamburger.classList.toggle("tham-active")
+                hamburger.classList.toggle("is-active")
 
                 mobileMenu.classList.toggle("header__mobile-menu--unhidden")
             }

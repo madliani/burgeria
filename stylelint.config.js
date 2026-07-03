@@ -4,9 +4,8 @@ export default {
     cache: true,
     defaultSeverity: "error",
     extends: [
-        "stylelint-config-standard",
+        "stylelint-config-standard-scss",
         "stylelint-config-clean-order",
-        "stylelint-config-tailwindcss",
         "stylelint-config-astro"
     ],
     fix: true,
@@ -18,6 +17,8 @@ export default {
             {
                 ignore: [
                     "css-cascade-layers",
+                    "css-logical-props",
+                    "css-media-range-syntax",
                     "css-nesting",
                     "viewport-unit-variants"
                 ],

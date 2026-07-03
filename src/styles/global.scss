@@ -1,0 +1,13 @@
+// Reset CSS
+@use "css-preflight";
+
+// Playfair Display font
+@use "@fontsource-variable/playfair-display/index.css";
+
+// Font Awesome icons
+@use "@fortawesome/fontawesome-free/css/all.css";
+
+// Hamburgers
+@use "hamburgers/dist/hamburgers.css";
+
+@use "layers";
