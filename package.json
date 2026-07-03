@@ -21,7 +21,7 @@
         "astro-eslint-parser": "2.1.0",
         "axios": "1.18.1",
         "css-preflight": "2.0.1",
-        "hamburgers": "1.2.1",
+        "delicious-hamburgers": "1.2.3",
         "nanostores": "1.4.0",
         "sass": "1.101.0",
         "sharp": "0.35.2",

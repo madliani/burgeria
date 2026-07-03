@@ -1,11 +1,13 @@
 ---
 import AbstractBloc from "@components/abstract-bloc.astro"
+import AbstractButton from "@components/abstract-button.astro"
 import AbstractHeader from "@components/abstract-header.astro"
 import AbstractLocalLink from "@components/abstract-local-link.astro"
 import AbstractLogo from "@components/abstract-logo.astro"
 import AbstractMenuItem from "@components/abstract-menu-item.astro"
 import AbstractMenu from "@components/abstract-menu.astro"
 import AbstractNavbar from "@components/abstract-navbar.astro"
+import AbstractTextDecoration from "@components/abstract-text-decoration.astro"
 
 interface MenuItem {
     name: string
@@ -37,11 +39,17 @@ const menuItems: readonly MenuItem[] = [
             }
         </AbstractMenu>
 
-        <AbstractBloc className="header__hamburger hamburger" id="hamburger">
-            <AbstractBloc className="hamburger-box">
-                <AbstractBloc className="hamburger-inner" />
+        <AbstractButton
+            className="header__hamburger hamburger hamburger--default"
+            id="hamburger"
+            type="button"
+        >
+            <AbstractBloc className="inner">
+                <AbstractTextDecoration className="bar" />
+                <AbstractTextDecoration className="bar" />
+                <AbstractTextDecoration className="bar" />
             </AbstractBloc>
-        </AbstractBloc>
+        </AbstractButton>
 
         <AbstractMenu className="header__mobile-menu" id="mobile-menu">
             {
@@ -62,7 +70,7 @@ const menuItems: readonly MenuItem[] = [
 
         if (hamburger !== null && mobileMenu !== null) {
             const toggleHamburgerMenu = () => {
-                hamburger.classList.toggle("is-active")
+                hamburger.classList.toggle("active")
 
                 mobileMenu.classList.toggle("header__mobile-menu--unhidden")
             }
