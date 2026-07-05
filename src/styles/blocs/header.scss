@@ -1,3 +1,5 @@
+@use "constants/themes" as themes;
+
 @function font-size-value($multiplier) {
     $default-font-size: 0.25rem;
 
@@ -85,8 +87,6 @@
     }
 
     &__mobile-menu {
-        $bg-prebuiltui-gradient: "/images/prebuiltui-gradient-background.svg";
-
         position: absolute;
         inset: 0;
 
@@ -102,7 +102,7 @@
         vertical-align: middle;
 
         visibility: hidden;
-        background: url($bg-prebuiltui-gradient);
+        background: themes.$bg-main-url;
         background-color: white;
         background-size: cover;
     }
