@@ -1,4 +1,4 @@
-@use "constants/themes" as themes;
+@use "constants/theme" as theme;
 @use "utilities/font-utilities" as *;
 @use "utilities/spacing-utilities" as *;
 
@@ -80,7 +80,7 @@
         vertical-align: middle;
 
         visibility: hidden;
-        background: themes.$bg-main-url;
+        background: theme.$bg-main-url;
         background-color: white;
         background-size: cover;
     }

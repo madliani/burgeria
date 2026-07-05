@@ -1,11 +1,11 @@
-@use "constants/themes" as themes;
+@use "constants/theme" as theme;
 
 .layout {
     position: relative;
 
-    font-family: themes.$font-playfair-display, sans-serif, serif;
+    font-family: theme.$font-playfair-display, sans-serif, serif;
 
-    background: themes.$bg-main-url;
+    background: theme.$bg-main-url;
     background-color: white;
     background-size: cover;
 }
