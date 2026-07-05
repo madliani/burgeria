@@ -1,0 +1,29 @@
+.footer {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: flex-end;
+
+    width: 100%;
+    min-height: 20svh;
+
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    vertical-align: middle;
+
+    &__legal-notice {
+        width: 100%;
+        font-style: italic;
+        text-align: center;
+    }
+
+    &__social-link-group {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 0.75rem;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+    }
+}
