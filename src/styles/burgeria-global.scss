@@ -32,6 +32,10 @@
 
     vertical-align: middle;
 
+    &__logo {
+        width: 128px;
+    }
+
     &__navbar {
         display: flex;
         flex-flow: row nowrap;
