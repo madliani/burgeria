@@ -1,9 +1,12 @@
 .layout {
+    $font-playfair-display: "Playfair Display Variable";
+    $bg-prebuiltui-gradient: "/images/prebuiltui-gradient-background.svg";
+
     position: relative;
 
-    font-family: "Playfair Display Variable", sans-serif, serif;
+    font-family: $font-playfair-display, sans-serif, serif;
 
-    background: url("/images/prebuiltui-gradient-background.svg");
-    background-color: #fff;
+    background: url($bg-prebuiltui-gradient);
+    background-color: white;
     background-size: cover;
 }
