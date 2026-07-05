@@ -21,13 +21,14 @@ const menuItems: readonly MenuItem[] = [
 ---
 
 <AbstractHeader className="header">
-    <AbstractLocalLink href="/">
-        <AbstractLogo
-            alt="Burgeria logo"
-            className="header__logo"
-            src="/icons/burgeria-logo.png"
-        /></AbstractLocalLink
-    >
+    <AbstractBloc className="header__logo">
+        <AbstractLocalLink href="/">
+            <AbstractLogo
+                alt="Burgeria logo"
+                src="/icons/burgeria-logo.png"
+            /></AbstractLocalLink
+        >
+    </AbstractBloc>
 
     <AbstractNavbar className="header__navbar">
         <AbstractMenu className="header__menu">
