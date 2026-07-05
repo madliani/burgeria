@@ -33,7 +33,11 @@
     vertical-align: middle;
 
     &__logo {
-        width: 128px;
+        width: 196px;
+
+        @media (width >= 640px) {
+            width: 128px;
+        }
     }
 
     &__navbar {
