@@ -1,8 +1,4 @@
-@function gap-value($multiplier) {
-    $default-gap: 0.25rem;
-
-    @return $default-gap * $multiplier;
-}
+@use "utilities/spacing-utilities" as *;
 
 .footer {
     display: flex;

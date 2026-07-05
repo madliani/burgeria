@@ -1,0 +1,11 @@
+@function padding-value($multiplier) {
+    $default-padding: 0.25rem;
+
+    @return $default-padding * $multiplier;
+}
+
+@function gap-value($multiplier) {
+    $default-gap: 0.25rem;
+
+    @return $default-gap * $multiplier;
+}
