@@ -61,6 +61,8 @@
     }
 
     &__mobile-menu {
+        $bg-prebuiltui-gradient: "/images/prebuiltui-gradient-background.svg";
+
         position: absolute;
         inset: 0;
 
@@ -76,8 +78,8 @@
         vertical-align: middle;
 
         visibility: hidden;
-        background: url("/images/prebuiltui-gradient-background.svg");
-        background-color: #fff;
+        background: url($bg-prebuiltui-gradient);
+        background-color: white;
         background-size: cover;
     }
 
