@@ -1,3 +1,27 @@
+@function font-size-value($multiplier) {
+    $default-font-size: 0.25rem;
+
+    @return $default-font-size * $multiplier;
+}
+
+@function line-height-value($multiplier) {
+    $default-line-height: 0.25rem;
+
+    @return $default-line-height * $multiplier;
+}
+
+@function padding-value($multiplier) {
+    $default-padding: 0.25rem;
+
+    @return $default-padding * $multiplier;
+}
+
+@function gap-value($multiplier) {
+    $default-gap: 0.25rem;
+
+    @return $default-gap * $multiplier;
+}
+
 .header {
     display: flex;
     flex-flow: row nowrap;
@@ -5,7 +29,7 @@
     justify-content: space-around;
 
     min-height: 10svh;
-    padding: 1.25rem 1.75rem;
+    padding: padding-value(5) padding-value(7);
 
     vertical-align: middle;
 
@@ -25,8 +49,8 @@
 
         width: 100%;
 
-        font-size: 1.25rem;
-        line-height: 1.75rem;
+        font-size: font-size-value(5);
+        line-height: line-height-value(7);
         vertical-align: middle;
     }
 
@@ -36,7 +60,7 @@
         @media (width >= 640px) {
             display: flex;
             flex-flow: row nowrap;
-            gap: 1.75rem;
+            gap: gap-value(7);
             align-items: center;
             justify-content: space-evenly;
 
@@ -68,12 +92,12 @@
 
         display: flex;
         flex-flow: column nowrap;
-        gap: 0.75rem;
+        gap: gap-value(3);
         align-items: flex-start;
         justify-content: flex-start;
 
         width: 100%;
-        padding: 1.25rem 0.75rem;
+        padding: padding-value(5) padding-value(3);
 
         vertical-align: middle;
 
