@@ -7,14 +7,14 @@
     align-items: center;
     justify-content: flex-end;
 
-    width: 100%;
+    width: 100svw;
     min-height: 20svh;
 
     font-family: serif, sans-serif;
     vertical-align: middle;
 
     &__legal-notice {
-        width: 100%;
+        width: 100svw;
         font-style: italic;
         text-align: center;
     }
@@ -26,6 +26,6 @@
         align-items: center;
         justify-content: center;
 
-        width: 100%;
+        width: 100svw;
     }
 }
