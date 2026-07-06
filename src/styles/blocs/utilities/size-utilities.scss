@@ -1,0 +1,23 @@
+@function bloc-width-value($multiplier) {
+    $default-bloc-width: 10svw;
+
+    @return $default-bloc-width * $multiplier;
+}
+
+@function bloc-height-value($multiplier) {
+    $default-bloc-height: 10svh;
+
+    @return $default-bloc-height * $multiplier;
+}
+
+@function element-width-value($multiplier) {
+    $default-bloc-width: 1rem;
+
+    @return $default-bloc-width * $multiplier;
+}
+
+@function element-height-value($multiplier) {
+    $default-bloc-height: 1rem;
+
+    @return $default-bloc-height * $multiplier;
+}

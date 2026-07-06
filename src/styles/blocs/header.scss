@@ -1,6 +1,8 @@
 @use "constants/theme" as theme;
 @use "utilities/font-utilities" as *;
 @use "utilities/spacing-utilities" as *;
+@use "utilities/size-utilities" as *;
+@use "utilities/position-utilities" as *;
 
 .header {
     display: flex;
@@ -8,24 +10,24 @@
     align-items: center;
     justify-content: space-around;
 
-    min-height: 10svh;
+    min-height: block-height-value(1);
     padding: padding-value(5) padding-value(7);
 
     vertical-align: middle;
 
     &__logo-container {
-        width: 80svw;
+        width: bloc-width-value(8);
 
         @media (width >= 640px) {
-            width: 20svw;
+            width: bloc-width-value(8);
         }
     }
 
     &__logo {
-        width: 8rem;
+        width: element-width-value(8);
 
         @media (width >= 640px) {
-            width: 8rem;
+            width: element-width-value(8);
         }
     }
 
@@ -35,14 +37,14 @@
         align-items: center;
         justify-content: flex-end;
 
-        width: 20svw;
+        width: block-with-value(2);
 
         font-size: font-size-value(5);
         line-height: line-height-value(7);
         vertical-align: middle;
 
         @media (width >= 640px) {
-            width: 80svw;
+            width: bloc-width-value(8);
         }
     }
 
@@ -69,7 +71,7 @@
     }
 
     &__hamburger {
-        z-index: 10;
+        z-index: z-index-value(1);
 
         @media (width >= 640px) {
             display: none;
@@ -78,7 +80,7 @@
 
     &__mobile-menu {
         position: absolute;
-        inset: 0;
+        inset: inset-value(0);
 
         display: flex;
         flex-flow: column nowrap;
@@ -86,7 +88,7 @@
         align-items: flex-start;
         justify-content: flex-start;
 
-        width: 100svw;
+        width: bloc-width-value(10);
         padding: padding-value(5) padding-value(3);
 
         vertical-align: middle;

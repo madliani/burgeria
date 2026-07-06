@@ -1,0 +1,11 @@
+@function z-index-value($multiplier) {
+    $default-z-index: 10;
+
+    @return $default-z-index * $multiplier;
+}
+
+@function inset-value($multiplier) {
+    $default-inset: 1rem;
+
+    @return $default-inset * $multiplier;
+}
