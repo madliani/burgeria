@@ -21,3 +21,9 @@
 
     @return $default-bloc-height * $multiplier;
 }
+
+@function border-radius-value($multiplier) {
+    $default-border-radius: 1rem;
+
+    @return $default-border-radius * $multiplier;
+}

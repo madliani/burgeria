@@ -1,0 +1,5 @@
+@function scale-value($multiplier) {
+    $default-scale-value: 0.1;
+
+    @return $default-scale-value * $multiplier;
+}

@@ -1,4 +1,7 @@
+@use "constants/theme" as theme;
+@use "utilities/animation-utilities" as *;
 @use "utilities/font-utilities" as *;
+@use "utilities/size-utilities" as *;
 @use "utilities/spacing-utilities" as *;
 
 .hero-section {
@@ -8,18 +11,18 @@
     align-items: center;
     justify-content: center;
 
-    width: 100svw;
+    width: bloc-width-value(10);
 
     text-align: center;
 
     &__title {
         font-size: font-size-value(12);
         font-weight: bold;
-        line-height: 3rem;
+        line-height: line-height-value(12);
 
         @media (width >= 640px) {
             font-size: font-size-value(17);
-            line-height: 3rem;
+            line-height: line-height-value(12);
         }
     }
 
@@ -28,8 +31,8 @@
         line-height: line-height-value(9);
 
         @media (width >= 640px) {
-            font-size: 3rem;
-            line-height: 3rem;
+            font-size: font-size-value(12);
+            line-height: line-height-value(12);
         }
     }
 
@@ -37,17 +40,17 @@
         cursor: pointer;
 
         padding: padding-value(5) padding-value(7);
-        border-radius: 99rem;
+        border-radius: border-radius-value(99);
 
         font-size: font-value(5);
-        font-weight: 600;
+        font-weight: theme.$font-weight-semi-bold;
         line-height: line-height-value(7);
         color: black;
 
         background-color: gold;
 
         &:active {
-            transform: scale(0.98);
+            transform: scale(scale-value(98));
         }
     }
 }
