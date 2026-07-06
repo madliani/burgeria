@@ -1,4 +1,5 @@
-@use "constants/theme" as theme;
+@use "constants/background" as *;
+@use "constants/fonts" as *;
 @use "utilities/size-utilities" as *;
 
 .layout {
@@ -6,9 +7,9 @@
 
     min-height: bloc-height-value(10);
 
-    font-family: theme.$font-playfair-display, sans-serif, serif;
+    font-family: $font-playfair-display, sans-serif, serif;
 
-    background: theme.$bg-gradient-main;
+    background: $bg-gradient-main;
     background-color: white;
     background-size: cover;
 }

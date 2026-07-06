@@ -1,4 +1,4 @@
-@use "constants/theme" as theme;
+@use "constants/background" as *;
 @use "utilities/font-utilities" as *;
 @use "utilities/spacing-utilities" as *;
 @use "utilities/size-utilities" as *;
@@ -94,8 +94,8 @@
         vertical-align: middle;
 
         visibility: hidden;
-        background: theme.$bg-gradient-main;
-        background-color: theme.$bg-color-main;
+        background: $bg-gradient-main;
+        background-color: $bg-color-main;
         background-size: cover;
     }
 
