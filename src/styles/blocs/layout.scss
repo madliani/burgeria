@@ -1,7 +1,10 @@
 @use "constants/theme" as theme;
+@use "utilities/size-utilities" as *;
 
 .layout {
     position: relative;
+
+    min-height: bloc-height-value(10);
 
     font-family: theme.$font-playfair-display, sans-serif, serif;
 
