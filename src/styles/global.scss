@@ -1,17 +1,17 @@
-// Layout styles
-@use "blocs/layout";
+// Base Layout styles
+@use "blocs/base-layout";
 
-// Noscript styles
-@use "blocs/noscript";
+// Base Noscript styles
+@use "blocs/base-noscript";
 
-// Header styles
-@use "blocs/header";
+// Base Header styles
+@use "blocs/base-header";
 
-// Main styles
-@use "blocs/main";
+// Base Main styles
+@use "blocs/base-main";
 
-// Hero section styles
+// Hero Section styles
 @use "blocs/hero-section";
 
-// Footer styles
-@use "blocs/footer";
+// Base Footer styles
+@use "blocs/base-footer";
