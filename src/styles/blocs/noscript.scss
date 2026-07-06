@@ -1,14 +1,4 @@
-@function font-size-value($multiplier) {
-    $default-font-size: 0.25rem;
-
-    @return $default-font-size * $multiplier;
-}
-
-@function line-height-value($multiplier) {
-    $default-line-height: 0.25rem;
-
-    @return $default-line-height * $multiplier;
-}
+@use "utilities/font-utilities" as *;
 
 .noscript {
     display: inline-block;
