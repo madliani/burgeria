@@ -1,9 +1,10 @@
 @use "utilities/font-utilities" as *;
+@use "utilities/size-utilities" as *;
 
 .noscript {
     display: inline-block;
 
-    width: 100svw;
+    width: bloc-width-value(10);
 
     font-size: font-size-value(5);
     line-height: line-height-value(7);
