@@ -8,18 +8,18 @@
     align-items: center;
     justify-content: center;
 
-    width: 100%;
+    width: 100svw;
 
     text-align: center;
 
     &__title {
         font-size: font-size-value(12);
         font-weight: bold;
-        line-height: 1;
+        line-height: 3rem;
 
         @media (width >= 640px) {
             font-size: font-size-value(17);
-            line-height: 1;
+            line-height: 3rem;
         }
     }
 
@@ -29,7 +29,7 @@
 
         @media (width >= 640px) {
             font-size: 3rem;
-            line-height: 1;
+            line-height: 3rem;
         }
     }
 
