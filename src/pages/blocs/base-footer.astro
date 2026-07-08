@@ -6,13 +6,13 @@ import AbstractIcon from "@pages/components/abstract-icon.astro"
 import AbstractParagraph from "@pages/components/abstract-paragraph.astro"
 ---
 
-<AbstractFooter className="footer">
-    <AbstractParagraph className="footer__legal-notice"
+<AbstractFooter className="base-footer">
+    <AbstractParagraph className="base-footer__legal-notice"
         >Copyright © {new Date().getUTCFullYear()}{" "}
         Madliani Studio. All Rights Reserved.</AbstractParagraph
     >
 
-    <AbstractBloc className="footer__social-link-group">
+    <AbstractBloc className="base-footer__social-link-group">
         <AbstractGlobalLink href="https://facebook.com/" title="Facebook link"
             ><AbstractIcon
                 className="fa-brands fa-facebook"
@@ -30,7 +30,7 @@ import AbstractParagraph from "@pages/components/abstract-paragraph.astro"
         >
     </AbstractBloc>
 
-    <AbstractBloc className="footer__noscript">
+    <AbstractBloc className="base-footer__noscript">
         <slot name="noscript" />
     </AbstractBloc>
 </AbstractFooter>

@@ -1,7 +1,7 @@
 @use "utilities/size-utilities" as *;
 @use "utilities/spacing-utilities" as *;
 
-.footer {
+.base-footer {
     display: flex;
     flex-flow: column nowrap;
     gap: gap-value(3);
