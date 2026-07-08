@@ -2,7 +2,7 @@
 @use "constants/fonts" as *;
 @use "utilities/size-utilities" as *;
 
-.layout {
+.base-layout {
     position: relative;
 
     min-height: bloc-height-value(10);
