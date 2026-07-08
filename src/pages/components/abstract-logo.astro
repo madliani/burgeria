@@ -3,10 +3,9 @@ interface Props {
     alt: string
     className?: string
     src: string
-    title?: string
 }
 
-const { alt, className, src, title } = Astro.props
+const { alt, className, src } = Astro.props
 ---
 
-<img alt={alt} aria-label={title} class={className} src={src} title={title} />
+<img alt={alt} aria-label={alt} class={className} src={src} title={alt} />
