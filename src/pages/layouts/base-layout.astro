@@ -2,9 +2,9 @@
 import MetadataConfig from "@configurations/metadata.config.json"
 import BaseFooter from "@pages/blocs/base-footer.astro"
 import BaseHeader from "@pages/blocs/base-header.astro"
+import BaseMain from "@pages/blocs/base-main.astro"
 import Noscript from "@pages/blocs/noscript.astro"
 import AbstractLayout from "@pages/components/abstract-layout.astro"
-import AbstractMain from "@pages/components/abstract-main.astro"
 import AbstractMetadata from "@pages/components/abstract-metadata.astro"
 import { ClientRouter } from "astro:transitions"
 
@@ -25,9 +25,9 @@ const { description = "", title = "" } = Astro.props
 
     <BaseHeader />
 
-    <AbstractMain className="base-layout__main">
+    <BaseMain>
         <slot />
-    </AbstractMain>
+    </BaseMain>
 
     <BaseFooter>
         <Noscript slot="noscript" />

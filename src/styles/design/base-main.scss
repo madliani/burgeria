@@ -1,0 +1,10 @@
+@use "utilities/size-utilities.scss" as *;
+
+.base-main {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+
+    min-height: bloc-height-value(7);
+}
