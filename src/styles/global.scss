@@ -4,16 +4,16 @@
 @use "layouts/base-layout";
 
 // Base Noscript styles
-@use "blocs/base-noscript";
+@use "design/base-noscript";
 
 // Base Header styles
-@use "blocs/base-header";
+@use "design/base-header";
 
 // Base Main styles
-@use "blocs/base-main";
+@use "design/base-main";
 
 // Base Footer styles
-@use "blocs/base-footer";
+@use "design/base-footer";
 
 // Home Hero styles
-@use "blocs/hero-section";
+@use "design/hero-section";
