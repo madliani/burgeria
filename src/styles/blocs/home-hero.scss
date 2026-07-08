@@ -5,7 +5,7 @@
 @use "utilities/size-utilities" as *;
 @use "utilities/spacing-utilities" as *;
 
-.hero-section {
+.home-hero {
     display: flex;
     flex-flow: column nowrap;
     gap: gap-value(5);
@@ -47,7 +47,7 @@
 }
 
 @media (width >= $sm) {
-    .hero-section {
+    .home-hero {
         &__title {
             font-size: font-size-value(17);
             line-height: line-height-value(12);
