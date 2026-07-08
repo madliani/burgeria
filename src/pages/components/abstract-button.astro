@@ -3,37 +3,14 @@ type ButtonTypeAttr = "button" | "reset" | "submit"
 
 interface Props {
     className?: string
-    href?: string
     id?: string
     title?: string
     type?: ButtonTypeAttr
 }
 
-const { className, href, id, title, type } = Astro.props
+const { className, id, title, type } = Astro.props
 ---
 
-{
-    typeof href === "string" ? (
-        <a href={href}>
-            <button
-                aria-label={title}
-                class={className}
-                id={id}
-                title={title}
-                type={type}
-            >
-                <slot />
-            </button>
-        </a>
-    ) : (
-        <button
-            aria-label={title}
-            class={className}
-            id={id}
-            title={title}
-            type={type}
-        >
-            <slot />
-        </button>
-    )
-}
+<button aria-label={title} class={className} id={id} title={title} type={type}>
+    <slot />
+</button>
