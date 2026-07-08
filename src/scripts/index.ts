@@ -1,4 +1,4 @@
-import { onHamburgerClick } from "@scripts/blocs/base-header"
+import { onHamburgerClick } from "@scripts/modules/base-header"
 
 const main = () => {
     try {
