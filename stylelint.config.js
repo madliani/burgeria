@@ -16,7 +16,6 @@ export default {
             true,
             {
                 ignore: [
-                    "css-cascade-layers",
                     "css-logical-props",
                     "css-media-range-syntax",
                     "css-nesting",
