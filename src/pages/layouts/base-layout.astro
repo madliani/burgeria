@@ -2,7 +2,7 @@
 import MetadataConfig from "@configurations/metadata.config.json"
 import BaseFooter from "@pages/blocs/base-footer.astro"
 import BaseHeader from "@pages/blocs/base-header.astro"
-import BaseNoscript from "@pages/blocs/base-noscript.astro"
+import Noscript from "@pages/blocs/noscript.astro"
 import AbstractLayout from "@pages/components/abstract-layout.astro"
 import AbstractMain from "@pages/components/abstract-main.astro"
 import AbstractMetadata from "@pages/components/abstract-metadata.astro"
@@ -26,7 +26,7 @@ const { description = "", title = "" } = Astro.props
     <BaseHeader />
 
     <AbstractMain className="base-layout__main">
-        <BaseNoscript />
+        <Noscript />
 
         <slot />
     </AbstractMain>
