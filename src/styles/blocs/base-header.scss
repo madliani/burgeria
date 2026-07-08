@@ -14,8 +14,6 @@
     min-height: block-height-value(1);
     padding: padding-value(5) padding-value(7);
 
-    vertical-align: middle;
-
     &__logo-container {
         width: bloc-width-value(8);
     }
@@ -34,7 +32,6 @@
 
         font-size: font-size-value(5);
         line-height: line-height-value(7);
-        vertical-align: middle;
     }
 
     &__menu {
@@ -65,8 +62,6 @@
 
         width: bloc-width-value(10);
         padding: padding-value(5) padding-value(3);
-
-        vertical-align: middle;
 
         visibility: hidden;
         background: $bg-gradient;
@@ -107,8 +102,6 @@
             gap: gap-value(7);
             align-items: center;
             justify-content: space-evenly;
-
-            vertical-align: middle;
         }
 
         &__hamburger {
