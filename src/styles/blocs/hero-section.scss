@@ -1,3 +1,4 @@
+@use "constants/breakpoints" as *;
 @use "constants/font-weights" as *;
 @use "utilities/animation-utilities" as *;
 @use "utilities/font-utilities" as *;
@@ -20,7 +21,7 @@
         font-weight: bold;
         line-height: line-height-value(12);
 
-        @media (width >= 640px) {
+        @media (width >= $sm) {
             font-size: font-size-value(17);
             line-height: line-height-value(12);
         }
@@ -30,7 +31,7 @@
         font-size: font-size-value(7.5);
         line-height: line-height-value(9);
 
-        @media (width >= 640px) {
+        @media (width >= $sm) {
             font-size: font-size-value(12);
             line-height: line-height-value(12);
         }

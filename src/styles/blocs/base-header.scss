@@ -1,4 +1,5 @@
 @use "constants/background" as *;
+@use "constants/breakpoints" as *;
 @use "utilities/font-utilities" as *;
 @use "utilities/spacing-utilities" as *;
 @use "utilities/size-utilities" as *;
@@ -18,7 +19,7 @@
     &__logo-container {
         width: bloc-width-value(8);
 
-        @media (width >= 640px) {
+        @media (width >= $sm) {
             width: bloc-width-value(8);
         }
     }
@@ -26,7 +27,7 @@
     &__logo {
         width: element-width-value(8);
 
-        @media (width >= 640px) {
+        @media (width >= $sm) {
             width: element-width-value(8);
         }
     }
@@ -43,7 +44,7 @@
         line-height: line-height-value(7);
         vertical-align: middle;
 
-        @media (width >= 640px) {
+        @media (width >= $sm) {
             width: bloc-width-value(8);
         }
     }
@@ -51,7 +52,7 @@
     &__menu {
         display: none;
 
-        @media (width >= 640px) {
+        @media (width >= $sm) {
             display: flex;
             flex-flow: row nowrap;
             gap: gap-value(7);
@@ -73,7 +74,7 @@
     &__hamburger {
         z-index: z-index-value(1);
 
-        @media (width >= 640px) {
+        @media (width >= $sm) {
             display: none;
         }
     }
