@@ -29,10 +29,12 @@ README.md
 
 # Assets
 assets/
-src/assets/
 
 # Public
 public/
+
+# Assets for pages
+src/assets/
 
 # Scripts for pages
 src/scripts/
