@@ -28,8 +28,7 @@
         "svelte": "5.56.4",
         "svelte-eslint-parser": "^1.8.0",
         "tslib": "2.8.1",
-        "typescript": "6.0.3",
-        "typescript-eslint": "8.63.0"
+        "typescript": "6.0.3"
     },
     "description": "The Fast Food Company.",
     "devDependencies": {
@@ -66,6 +65,7 @@
         "stylelint-config-standard-scss": "17.0.0",
         "stylelint-no-unsupported-browser-features": "8.1.1",
         "stylelint-order": "8.1.1",
+        "typescript-eslint": "8.63.0",
         "vitest": "4.1.10"
     },
     "engineStrict": false,
