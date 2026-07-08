@@ -18,18 +18,10 @@
 
     &__logo-container {
         width: bloc-width-value(8);
-
-        @media (width >= $sm) {
-            width: bloc-width-value(8);
-        }
     }
 
     &__logo {
         width: element-width-value(8);
-
-        @media (width >= $sm) {
-            width: element-width-value(8);
-        }
     }
 
     &__navbar {
@@ -43,24 +35,10 @@
         font-size: font-size-value(5);
         line-height: line-height-value(7);
         vertical-align: middle;
-
-        @media (width >= $sm) {
-            width: bloc-width-value(8);
-        }
     }
 
     &__menu {
         display: none;
-
-        @media (width >= $sm) {
-            display: flex;
-            flex-flow: row nowrap;
-            gap: gap-value(7);
-            align-items: center;
-            justify-content: space-evenly;
-
-            vertical-align: middle;
-        }
     }
 
     &__menu-item {
@@ -73,10 +51,6 @@
 
     &__hamburger {
         z-index: z-index-value(1);
-
-        @media (width >= $sm) {
-            display: none;
-        }
     }
 
     &__mobile-menu {
@@ -109,6 +83,36 @@
 
         &:hover {
             text-decoration: underline;
+        }
+    }
+}
+
+@media (width >= $sm) {
+    .header {
+        &__logo-container {
+            width: bloc-width-value(8);
+        }
+
+        &__logo {
+            width: element-width-value(8);
+        }
+
+        &__navbar {
+            width: bloc-width-value(8);
+        }
+
+        &__menu {
+            display: flex;
+            flex-flow: row nowrap;
+            gap: gap-value(7);
+            align-items: center;
+            justify-content: space-evenly;
+
+            vertical-align: middle;
+        }
+
+        &__hamburger {
+            display: none;
         }
     }
 }
