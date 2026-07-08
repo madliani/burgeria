@@ -1,8 +1,11 @@
 import { configDefaults, defineConfig } from "vitest/config"
 
+const PORT = 51204
+
 export default defineConfig({
     plugins: [],
     resolve: { tsconfigPaths: true },
+    server: { host: true, open: true, port: PORT },
     test: {
         ...configDefaults,
         coverage: {
