@@ -92,18 +92,18 @@
         "url": "git+https://github.com/madliani/burgeria.git"
     },
     "scripts": {
-        "astro": "astro",
-        "build": "astro build",
-        "check": "stylelint ./ && eslint --fix && tsc && astro check && prettier ./ --ignore-unknown --write",
+        "astro": "env-cmd -- astro",
+        "build": "env-cmd -- astro build",
+        "check": "stylelint ./ && eslint --fix && tsc && env-cmd -- astro check && prettier ./ --ignore-unknown --write",
         "check:format": "prettier ./ --ignore-unknown --write",
-        "check:lint": "stylelint ./ && eslint --fix && tsc && astro check",
+        "check:lint": "stylelint ./ && eslint --fix && tsc && env-cmd -- astro check",
         "serve": "env-cmd -- astro dev",
         "serve:preview": "env-cmd -- astro preview",
-        "telemetry:disable": "astro telemetry disable",
-        "test": "vitest run",
-        "test:coverage": "vitest run --coverage",
+        "telemetry:disable": "env-cmd -- astro telemetry disable",
+        "test": "env-cmd -- vitest run",
+        "test:coverage": "env-cmd -- vitest run --coverage",
         "test:ui": "env-cmd -- vitest watch --ui --coverage.enabled=true",
-        "test:watch": "vitest watch"
+        "test:watch": "env-cmd -- vitest watch"
     },
     "type": "module",
     "version": "0.9.0"
