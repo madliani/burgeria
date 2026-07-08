@@ -2,7 +2,9 @@ import sitemapIntegration from "@astrojs/sitemap"
 import svelteIntegration from "@astrojs/svelte"
 import { defineConfig } from "astro/config"
 
-const PORT = 4321
+const DEFAULT_PORT = 4321
+
+const port = Number.parseInt(process.env.ASTRO_PORT) ?? DEFAULT_PORT
 
 const integrations = [svelteIntegration(), sitemapIntegration()]
 
@@ -12,6 +14,6 @@ export default defineConfig({
     devToolbar: { enabled: true },
     integrations: [...integrations],
     prefetch: { defaultStrategy: "tap" },
-    server: { host: true, open: true, port: PORT },
+    server: { host: true, open: true, port: port },
     site: "https://burgeria.vercel.app/"
 })
