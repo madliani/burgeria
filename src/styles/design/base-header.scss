@@ -80,10 +80,8 @@
             text-decoration: underline;
         }
     }
-}
 
-@media (width >= $sm) {
-    .header {
+    @media (width >= $sm) {
         &__logo-container {
             width: bloc-width-value(8);
         }
