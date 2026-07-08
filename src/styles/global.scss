@@ -3,9 +3,6 @@
 // Base Layout styles
 @use "design/base-layout";
 
-// Base Noscript styles
-@use "design/noscript";
-
 // Base Header styles
 @use "design/base-header";
 
@@ -14,3 +11,6 @@
 
 // Home Hero styles
 @use "design/hero-section";
+
+// Base Noscript styles
+@use "design/noscript";
