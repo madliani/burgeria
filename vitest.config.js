@@ -1,11 +1,13 @@
 import { configDefaults, defineConfig } from "vitest/config"
 
-const PORT = 51204
+const DEFAULT_PORT = 51204
+
+const port = Number.parseInt(process.env.VITEST_PORT) ?? DEFAULT_PORT
 
 export default defineConfig({
     plugins: [],
     resolve: { tsconfigPaths: true },
-    server: { host: true, open: true, port: PORT },
+    server: { host: true, open: true, port: port },
     test: {
         ...configDefaults,
         coverage: {
