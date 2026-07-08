@@ -5,7 +5,7 @@
 @use "utilities/size-utilities" as *;
 @use "utilities/position-utilities" as *;
 
-.header {
+.base-header {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;

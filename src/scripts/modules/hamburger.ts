@@ -7,7 +7,9 @@ const onHamburgerClick = () => {
             const toggleHamburgerMenu = () => {
                 hamburger.classList.toggle("active")
 
-                mobileMenu.classList.toggle("header__mobile-menu--unhidden")
+                mobileMenu.classList.toggle(
+                    "base-header__mobile-menu--unhidden"
+                )
             }
 
             hamburger.addEventListener("click", toggleHamburgerMenu)

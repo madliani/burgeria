@@ -20,22 +20,22 @@ const menuItems: readonly MenuItem[] = [
 ]
 ---
 
-<AbstractHeader className="header">
-    <AbstractBloc className="header__logo-container">
+<AbstractHeader className="base-header">
+    <AbstractBloc className="base-header__logo-container">
         <AbstractLocalLink href="/">
             <AbstractLogo
                 alt="Burgeria logo"
-                className="header__logo"
+                className="base-header__logo"
                 src="/icons/burgeria-logo.png"
             /></AbstractLocalLink
         >
     </AbstractBloc>
 
-    <AbstractNavbar className="header__navbar">
-        <AbstractMenu className="header__menu">
+    <AbstractNavbar className="base-header__navbar">
+        <AbstractMenu className="base-header__menu">
             {
                 menuItems.map(({ name, url }) => (
-                    <AbstractMenuItem className="header__menu-item">
+                    <AbstractMenuItem className="base-header__menu-item">
                         <AbstractLocalLink href={url}>{name}</AbstractLocalLink>
                     </AbstractMenuItem>
                 ))
@@ -43,7 +43,7 @@ const menuItems: readonly MenuItem[] = [
         </AbstractMenu>
 
         <AbstractButton
-            className="header__hamburger hamburger hamburger--default"
+            className="base-header__hamburger hamburger hamburger--default"
             id="hamburger"
             type="button"
         >
@@ -54,10 +54,10 @@ const menuItems: readonly MenuItem[] = [
             </AbstractBloc>
         </AbstractButton>
 
-        <AbstractMenu className="header__mobile-menu" id="mobile-menu">
+        <AbstractMenu className="base-header__mobile-menu" id="mobile-menu">
             {
                 menuItems.map(({ name, url }) => (
-                    <AbstractMenuItem className="header__mobile-menu-item">
+                    <AbstractMenuItem className="base-header__mobile-menu-item">
                         <AbstractLocalLink href={url}>{name}</AbstractLocalLink>
                     </AbstractMenuItem>
                 ))
