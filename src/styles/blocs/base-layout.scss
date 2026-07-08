@@ -12,4 +12,13 @@
     background: $bg-gradient;
     background-color: $bg-color;
     background-size: cover;
+
+    &__main {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+
+        min-height: bloc-height-value(7);
+    }
 }
