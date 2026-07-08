@@ -1,11 +1,12 @@
 ---
 interface Props {
     className?: string
+    title?: string
 }
 
-const { className } = Astro.props
+const { className, title } = Astro.props
 ---
 
-<section class={className}>
+<section aria-label={title} class={className} title={title}>
     <slot />
 </section>
