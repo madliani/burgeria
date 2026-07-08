@@ -44,10 +44,8 @@
             transform: scale(scale-value(98));
         }
     }
-}
 
-@media (width >= $sm) {
-    .home-hero {
+    @media (width >= $sm) {
         &__title {
             font-size: font-size-value(17);
             line-height: line-height-value(12);
