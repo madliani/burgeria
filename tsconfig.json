@@ -3,7 +3,7 @@
         "incremental": true,
         "tsBuildInfoFile": ".tsbuildinfo"
     },
-    "include": [],
+    "files": [],
     "references": [
         { "path": "./tsconfig.astro.json" },
         { "path": "./tsconfig.svelte.json" }
