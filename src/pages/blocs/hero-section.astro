@@ -1,5 +1,6 @@
 ---
 import AbstractButton from "@pages/components/abstract-button.astro"
+import AbstractLocalLink from "@pages/components/abstract-local-link.astro"
 import AbstractSection from "@pages/components/abstract-section.astro"
 import AbstractSubtitle from "@pages/components/abstract-subtitle.astro"
 import AbstractTitle from "@pages/components/abstract-title.astro"
@@ -14,7 +15,9 @@ import AbstractTitle from "@pages/components/abstract-title.astro"
         The Fast Food Company
     </AbstractSubtitle>
 
-    <AbstractButton className="hero-section__button" title="View menu">
-        View button
-    </AbstractButton>
+    <AbstractLocalLink href="/">
+        <AbstractButton className="hero-section__button" title="View menu">
+            View button
+        </AbstractButton></AbstractLocalLink
+    >
 </AbstractSection>
