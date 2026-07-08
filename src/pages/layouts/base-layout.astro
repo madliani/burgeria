@@ -26,10 +26,10 @@ const { description = "", title = "" } = Astro.props
     <BaseHeader />
 
     <AbstractMain className="base-layout__main">
-        <Noscript />
-
         <slot />
     </AbstractMain>
 
-    <BaseFooter />
+    <BaseFooter>
+        <Noscript slot="noscript" />
+    </BaseFooter>
 </AbstractLayout>
