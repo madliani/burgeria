@@ -65,33 +65,3 @@ const menuItems: readonly MenuItem[] = [
         </AbstractMenu>
     </AbstractNavbar>
 </AbstractHeader>
-
-<script>
-    document.addEventListener("astro:page-load", () => {
-        const hamburger = document.getElementById("hamburger")
-        const mobileMenu = document.getElementById("mobile-menu")
-
-        if (hamburger !== null && mobileMenu !== null) {
-            const toggleHamburgerMenu = () => {
-                hamburger.classList.toggle("active")
-
-                mobileMenu.classList.toggle("header__mobile-menu--unhidden")
-            }
-
-            hamburger.addEventListener("click", toggleHamburgerMenu)
-            mobileMenu.addEventListener("click", toggleHamburgerMenu)
-
-            for (
-                let index = 0;
-                index <= (mobileMenu.children.length ?? 0) - 1;
-                index++
-            ) {
-                const menuItem = mobileMenu.children.item(index)
-
-                if (menuItem !== null) {
-                    menuItem.addEventListener("click", toggleHamburgerMenu)
-                }
-            }
-        }
-    })
-</script>
