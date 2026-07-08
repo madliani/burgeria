@@ -5,7 +5,6 @@ import { defineConfig } from "astro/config"
 const DEFAULT_PORT = 4321
 
 const port = Number.parseInt(process.env.ASTRO_PORT) ?? DEFAULT_PORT
-
 const integrations = [svelteIntegration(), sitemapIntegration()]
 
 /** @type {import("astro").AstroConfig} */
