@@ -38,9 +38,6 @@ importers:
       delicious-hamburgers:
         specifier: 1.2.3
         version: 1.2.3
-      env-cmd:
-        specifier: 11.0.0
-        version: 11.0.0
       nanostores:
         specifier: 1.4.0
         version: 1.4.0
@@ -96,6 +93,9 @@ importers:
       '@vitest/ui':
         specifier: 4.1.10
         version: 4.1.10(vitest@4.1.10)
+      env-cmd:
+        specifier: 11.0.0
+        version: 11.0.0
       eslint:
         specifier: 10.6.0
         version: 10.6.0
