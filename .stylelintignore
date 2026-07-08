@@ -33,3 +33,6 @@ src/assets/
 
 # Public
 public/
+
+# Scripts for pages
+src/scripts/

@@ -3,10 +3,7 @@
         "lib": ["dom", "dom.asynciterable", "dom.iterable"],
         "paths": {
             "@assets/*": ["${configDir}/src/assets/*"],
-            "@blocs/*": ["${configDir}/src/blocs/*"],
-            "@components/*": ["${configDir}/src/components/*"],
             "@configurations/*": ["${configDir}/src/configurations/*"],
-            "@layouts/*": ["${configDir}/src/layouts/*"],
             "@pages/*": ["${configDir}/src/pages/*"],
             "@scripts/*": ["${configDir}/src/scripts/*"],
             "@src/*": ["${configDir}/src/*"],
