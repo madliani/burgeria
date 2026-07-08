@@ -5,7 +5,6 @@
         "allowUnreachableCode": false,
         "allowUnusedLabels": false,
         "alwaysStrict": true,
-        "composite": true,
         "erasableSyntaxOnly": true,
         "esModuleInterop": true,
         "exactOptionalPropertyTypes": true,
