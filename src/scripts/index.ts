@@ -1,4 +1,4 @@
-import { onHamburgerClick } from "@scripts/modules/base-header"
+import { onHamburgerClick } from "@scripts/modules/hamburger"
 
 const main = () => {
     try {
