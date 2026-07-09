@@ -5,14 +5,14 @@ interface Props {
     className?: string
     dataset?: DOMStringMap
     id?: string
-    lang?: string
+    language?: string
 }
 
-const { className, dataset, id, lang } = Astro.props
+const { className, dataset, id, language } = Astro.props
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html lang={language}>
     <head>
         <slot name="head" />
     </head>
