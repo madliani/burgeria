@@ -1,12 +1,15 @@
 ---
+import { parseDataAttrs } from "@pages/components/utilities/property-utilities"
+
 interface Props {
     className?: string
+    dataset?: DOMStringMap
     href: string
     newTab?: boolean
     title?: string
 }
 
-const { className, href, newTab = true, title } = Astro.props
+const { className, dataset, href, newTab = true, title } = Astro.props
 ---
 
 {
@@ -19,6 +22,7 @@ const { className, href, newTab = true, title } = Astro.props
             rel="noopener noreferrer"
             target="_blank"
             title={title}
+            {...parseDataAttrs(dataset)}
         >
             <slot />
         </a>
@@ -30,6 +34,7 @@ const { className, href, newTab = true, title } = Astro.props
             referrerpolicy="no-referrer"
             rel="noopener noreferrer"
             title={title}
+            {...parseDataAttrs(dataset)}
         >
             <slot />
         </a>

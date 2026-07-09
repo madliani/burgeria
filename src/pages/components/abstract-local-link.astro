@@ -1,13 +1,22 @@
 ---
+import { parseDataAttrs } from "@pages/components/utilities/property-utilities"
+
 interface Props {
     className?: string
+    dataset?: DOMStringMap
     href: string
     title?: string
 }
 
-const { className, href, title } = Astro.props
+const { className, dataset, href, title } = Astro.props
 ---
 
-<a aria-label={title} class={className} href={href} title={title}>
+<a
+    aria-label={title}
+    class={className}
+    href={href}
+    title={title}
+    {...parseDataAttrs(dataset)}
+>
     <slot />
 </a>

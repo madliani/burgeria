@@ -1,14 +1,24 @@
 ---
+import { parseDataAttrs } from "@pages/components/utilities/property-utilities"
+
 interface Props {
     className?: string
+    dataset?: DOMStringMap
     id?: string
     title?: string
     type?: HTMLButtonElement["type"]
 }
 
-const { className, id, title, type } = Astro.props
+const { className, dataset, id, title, type } = Astro.props
 ---
 
-<button aria-label={title} class={className} id={id} title={title} type={type}>
+<button
+    aria-label={title}
+    class={className}
+    id={id}
+    title={title}
+    type={type}
+    {...parseDataAttrs(dataset)}
+>
     <slot />
 </button>

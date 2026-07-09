@@ -1,11 +1,14 @@
 ---
+import { parseDataAttrs } from "@pages/components/utilities/property-utilities"
+
 interface Props {
     className?: string
+    dataset?: DOMStringMap
 }
 
-const { className } = Astro.props
+const { className, dataset } = Astro.props
 ---
 
-<footer class={className}>
+<footer class={className} {...parseDataAttrs(dataset)}>
     <slot />
 </footer>
