@@ -4,11 +4,12 @@ import { parseDataAttrs } from "@pages/components/utilities/property-utilities"
 interface Props {
     className?: string
     dataset?: DOMStringMap
+    id?: string
 }
 
-const { className, dataset } = Astro.props
+const { className, dataset, id } = Astro.props
 ---
 
-<noscript class={className} {...parseDataAttrs(dataset)}>
+<noscript class={className} id={id} {...parseDataAttrs(dataset)}>
     <slot />
 </noscript>

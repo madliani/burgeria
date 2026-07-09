@@ -4,14 +4,16 @@ import { parseDataAttrs } from "@pages/components/utilities/property-utilities"
 interface Props {
     className: string
     dataset?: DOMStringMap
+    id?: string
     title?: string
 }
 
-const { className, dataset, title } = Astro.props
+const { className, dataset, id, title } = Astro.props
 ---
 
 <i
     aria-label={title}
     class={className}
+    id={id}
     title={title}
     {...parseDataAttrs(dataset)}></i>

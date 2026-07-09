@@ -4,10 +4,11 @@ import { parseDataAttrs } from "@pages/components/utilities/property-utilities"
 interface Props {
     className?: string
     dataset?: DOMStringMap
+    id?: string
     lang?: string
 }
 
-const { className, dataset, lang } = Astro.props
+const { className, dataset, id, lang } = Astro.props
 ---
 
 <!doctype html>
@@ -16,7 +17,7 @@ const { className, dataset, lang } = Astro.props
         <slot name="head" />
     </head>
 
-    <body class={className} {...parseDataAttrs(dataset)}>
+    <body class={className} id={id} {...parseDataAttrs(dataset)}>
         <slot />
     </body></html
 >
