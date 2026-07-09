@@ -1,7 +1,7 @@
 const onHamburgerClick = () => {
     document.addEventListener("astro:page-load", () => {
-        const hamburger = document.getElementById("hamburger")
-        const mobileMenu = document.getElementById("mobile-menu")
+        const hamburger = document.querySelector("[data-id='hamburger']")
+        const mobileMenu = document.querySelector("[data-id='mobile-menu']")
 
         if (hamburger !== null && mobileMenu !== null) {
             const toggleHamburgerMenu = () => {

@@ -38,7 +38,7 @@ const menuItems: readonly MenuItem[] = [{ name: "Home", url: "/" }]
 
         <AbstractButton
             className="base-header__hamburger hamburger hamburger--default"
-            id="hamburger"
+            dataset={{ id: "hamburger" }}
             type="button"
         >
             <AbstractBloc className="inner">
@@ -50,7 +50,10 @@ const menuItems: readonly MenuItem[] = [{ name: "Home", url: "/" }]
             </AbstractBloc>
         </AbstractButton>
 
-        <AbstractMenu className="base-header__mobile-menu" id="mobile-menu">
+        <AbstractMenu
+            className="base-header__mobile-menu"
+            dataset={{ id: "mobile-menu" }}
+        >
             {
                 menuItems.map(({ name, url }) => (
                     <AbstractMenuItem className="base-header__mobile-menu-item">
