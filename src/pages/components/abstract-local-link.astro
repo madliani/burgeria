@@ -5,18 +5,34 @@ interface Props {
     className?: string
     dataset?: DOMStringMap
     href: string
+    newTab?: boolean
     title?: string
 }
 
-const { className, dataset, href, title } = Astro.props
+const { className, dataset, href, newTab = false, title } = Astro.props
 ---
 
-<a
-    aria-label={title}
-    class={className}
-    href={href}
-    title={title}
-    {...parseDataAttrs(dataset)}
->
-    <slot />
-</a>
+{
+    newTab ? (
+        <a
+            aria-label={title}
+            class={className}
+            href={href}
+            target="_blank"
+            title={title}
+            {...parseDataAttrs(dataset)}
+        >
+            <slot />
+        </a>
+    ) : (
+        <a
+            aria-label={title}
+            class={className}
+            href={href}
+            title={title}
+            {...parseDataAttrs(dataset)}
+        >
+            <slot />
+        </a>
+    )
+}
