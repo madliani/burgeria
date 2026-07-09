@@ -1,11 +1,9 @@
 ---
-type ButtonTypeAttr = "button" | "reset" | "submit"
-
 interface Props {
     className?: string
     id?: string
     title?: string
-    type?: ButtonTypeAttr
+    type?: HTMLButtonElement["type"]
 }
 
 const { className, id, title, type } = Astro.props
