@@ -1,4 +1,6 @@
 ---
+import type MenuItem from "@pages/components/types/menu-item"
+
 import AbstractBloc from "@pages/components/abstract-bloc.astro"
 import AbstractButton from "@pages/components/abstract-button.astro"
 import AbstractHeader from "@pages/components/abstract-header.astro"
@@ -8,11 +10,6 @@ import AbstractMenuItem from "@pages/components/abstract-menu-item.astro"
 import AbstractMenu from "@pages/components/abstract-menu.astro"
 import AbstractNavbar from "@pages/components/abstract-navbar.astro"
 import AbstractTextDecoration from "@pages/components/abstract-text-decoration.astro"
-
-interface MenuItem {
-    name: string
-    url: string
-}
 
 const menuItems: readonly MenuItem[] = [{ name: "Home", url: "/" }]
 ---
