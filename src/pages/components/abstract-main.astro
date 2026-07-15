@@ -10,6 +10,6 @@ interface Props {
 const { className, dataset, id } = Astro.props
 ---
 
-<main class={className} id={id} {...parseDataAttrs(dataset)}>
+<main class={className} id={id} {...parseDataAttrs(dataset)} role="main">
     <slot />
 </main>

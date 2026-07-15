@@ -17,6 +17,7 @@ const { className, dataset, id, title } = Astro.props
     id={id}
     title={title}
     {...parseDataAttrs(dataset)}
+    role="navigation"
 >
     <slot />
 </nav>

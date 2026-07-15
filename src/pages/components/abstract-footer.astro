@@ -10,6 +10,11 @@ interface Props {
 const { className, dataset, id } = Astro.props
 ---
 
-<footer class={className} id={id} {...parseDataAttrs(dataset)}>
+<footer
+    class={className}
+    id={id}
+    {...parseDataAttrs(dataset)}
+    role="contentinfo"
+>
     <slot />
 </footer>
