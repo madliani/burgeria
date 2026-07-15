@@ -81,7 +81,7 @@
         }
     }
 
-    @media (width >= $sm) {
+    @media only screen and (width >= $sm) {
         &__logo-container {
             width: bloc-width-value(8);
         }
