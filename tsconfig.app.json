@@ -8,7 +8,6 @@
             "@configurations/*": ["${configDir}/src/configurations/*"],
             "@layouts/*": ["${configDir}/src/layouts/*"],
             "@pages/*": ["${configDir}/src/pages/*"],
-            "@scripts/*": ["${configDir}/src/scripts/*"],
             "@src/*": ["${configDir}/src/*"],
             "@styles/*": ["${configDir}/src/styles/*"],
             "@svelte/*": ["${configDir}/src/svelte/*"]
