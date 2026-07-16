@@ -1,11 +1,11 @@
 ---
+import BaseFooter from "@blocs/base-footer.astro"
+import BaseHeader from "@blocs/base-header.astro"
+import BaseMain from "@blocs/base-main.astro"
+import Noscript from "@blocs/noscript.astro"
+import AbstractLayout from "@components/abstract-layout.astro"
+import AbstractMetadata from "@components/abstract-metadata.astro"
 import MetadataConfig from "@configurations/metadata.config.json"
-import BaseFooter from "@pages/blocs/base-footer.astro"
-import BaseHeader from "@pages/blocs/base-header.astro"
-import BaseMain from "@pages/blocs/base-main.astro"
-import Noscript from "@pages/blocs/noscript.astro"
-import AbstractLayout from "@pages/components/abstract-layout.astro"
-import AbstractMetadata from "@pages/components/abstract-metadata.astro"
 import { ClientRouter } from "astro:transitions"
 
 interface Props {

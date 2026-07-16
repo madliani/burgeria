@@ -1,5 +1,5 @@
 ---
-import { parseDataAttrs } from "@pages/components/utilities/property-utilities"
+import { parseDataAttrs } from "@components/utilities/property-utilities"
 
 interface Props {
     className?: string
@@ -10,7 +10,7 @@ interface Props {
     title?: string
 }
 
-const { className, dataset, href, id, newTab = false, title } = Astro.props
+const { className, dataset, href, id, newTab = true, title } = Astro.props
 ---
 
 {
@@ -20,6 +20,8 @@ const { className, dataset, href, id, newTab = false, title } = Astro.props
             class={className}
             href={href}
             id={id}
+            referrerpolicy="no-referrer"
+            rel="noopener noreferrer"
             target="_blank"
             title={title}
             {...parseDataAttrs(dataset)}
@@ -32,6 +34,8 @@ const { className, dataset, href, id, newTab = false, title } = Astro.props
             class={className}
             href={href}
             id={id}
+            referrerpolicy="no-referrer"
+            rel="noopener noreferrer"
             title={title}
             {...parseDataAttrs(dataset)}
         >
