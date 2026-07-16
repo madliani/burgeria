@@ -96,7 +96,5 @@ const menuItems: readonly MenuItem[] = [{ name: "Home", url: "/" }]
         }
     }
 
-    document.addEventListener("astro:page-load", () => {
-        onHamburgerClick()
-    })
+    document.addEventListener("astro:page-load", onHamburgerClick)
 </script>
