@@ -6,7 +6,7 @@
     @return $default-z-index * $multiplier;
 }
 
-@function in($multiplier) {
+@function inst($multiplier) {
     $default-inset: 1rem;
 
     @return $default-inset * $multiplier;

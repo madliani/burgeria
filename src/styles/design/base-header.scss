@@ -12,14 +12,14 @@
     justify-content: space-around;
 
     min-height: block-height-value(1);
-    padding: p(5) p(7);
+    padding: pd(5) pd(7);
 
     &__logo-container {
-        width: bw(8);
+        width: bwd(8);
     }
 
     &__logo {
-        width: ew(8);
+        width: ewd(8);
     }
 
     &__navbar {
@@ -28,7 +28,7 @@
         align-items: center;
         justify-content: flex-end;
 
-        width: bw(2);
+        width: bwd(2);
 
         font-size: fs(5);
         line-height: lh(7);
@@ -52,16 +52,16 @@
 
     &__mobile-menu {
         position: absolute;
-        inset: in(0);
+        inset: inst(0);
 
         display: flex;
         flex-flow: column nowrap;
-        gap: gap(3);
+        gap: gp(3);
         align-items: flex-start;
         justify-content: flex-start;
 
-        width: bw(10);
-        padding: p(5) p(3);
+        width: bwd(10);
+        padding: pd(5) pd(3);
 
         visibility: hidden;
         background: $bg-gradient;
@@ -83,21 +83,21 @@
 
     @media only screen and (width >= $sm) {
         &__logo-container {
-            width: bw(8);
+            width: bwd(8);
         }
 
         &__logo {
-            width: ew(8);
+            width: ewd(8);
         }
 
         &__navbar {
-            width: bw(8);
+            width: bwd(8);
         }
 
         &__menu {
             display: flex;
             flex-flow: row nowrap;
-            gap: gap(7);
+            gap: gp(7);
             align-items: center;
             justify-content: space-evenly;
         }
