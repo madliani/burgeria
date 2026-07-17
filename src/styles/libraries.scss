@@ -1,6 +1,6 @@
 // Libraries
 
-// Reset CSS
+// CSS Preflight library
 @use "css-preflight";
 
 // Playfair Display font
@@ -9,5 +9,5 @@
 // Font Awesome icons
 @use "@fortawesome/fontawesome-free/css/all.css";
 
-// Delicious Hamburgers
+// Delicious Hamburgers library
 @use "delicious-hamburgers/dist/hamburgers.css";
