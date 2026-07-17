@@ -5,7 +5,7 @@
             "@assets/*": ["${configDir}/src/assets/*"],
             "@blocs/*": ["${configDir}/src/blocs/*"],
             "@components/*": ["${configDir}/src/components/*"],
-            "@configurations/*": ["${configDir}/src/configurations/*"],
+            "@configs/*": ["${configDir}/src/configs/*"],
             "@layouts/*": ["${configDir}/src/layouts/*"],
             "@pages/*": ["${configDir}/src/pages/*"],
             "@src/*": ["${configDir}/src/*"],
