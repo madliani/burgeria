@@ -4,10 +4,10 @@
 .noscript {
     display: inline-block;
 
-    width: bloc-width-value(10);
+    width: bw(10);
 
-    font-size: font-size-value(5);
-    line-height: line-height-value(7);
+    font-size: fs(5);
+    line-height: lh(7);
     text-align: center;
 
     background-color: red;

@@ -4,18 +4,18 @@
 .base-footer {
     display: flex;
     flex-flow: column nowrap;
-    gap: gap-value(3);
+    gap: gap(3);
     align-items: center;
     justify-content: flex-end;
 
-    width: bloc-width-value(10);
-    min-height: bloc-height-value(2);
-    padding: padding-value(5) padding-value(7);
+    width: bw(10);
+    min-height: bh(2);
+    padding: p(5) p(7);
 
     font-family: serif, sans-serif;
 
     &__legal-notice {
-        width: bloc-width-value(10);
+        width: bw(10);
         font-style: italic;
         text-align: center;
         text-wrap: wrap;
@@ -24,14 +24,14 @@
     &__social-link-group {
         display: flex;
         flex-flow: row nowrap;
-        gap: gap-value(3);
+        gap: gap(3);
         align-items: center;
         justify-content: center;
 
-        width: bloc-width-value(10);
+        width: bw(10);
     }
 
     &__noscript {
-        width: bloc-width-value(10);
+        width: bw(10);
     }
 }

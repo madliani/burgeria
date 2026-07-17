@@ -1,12 +1,12 @@
 // Position utilities
 
-@function z-index-value($multiplier) {
+@function zi($multiplier) {
     $default-z-index: 10;
 
     @return $default-z-index * $multiplier;
 }
 
-@function inset-value($multiplier) {
+@function in($multiplier) {
     $default-inset: 1rem;
 
     @return $default-inset * $multiplier;

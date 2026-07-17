@@ -12,14 +12,14 @@
     justify-content: space-around;
 
     min-height: block-height-value(1);
-    padding: padding-value(5) padding-value(7);
+    padding: p(5) p(7);
 
     &__logo-container {
-        width: bloc-width-value(8);
+        width: bw(8);
     }
 
     &__logo {
-        width: element-width-value(8);
+        width: ew(8);
     }
 
     &__navbar {
@@ -28,10 +28,10 @@
         align-items: center;
         justify-content: flex-end;
 
-        width: block-width-value(2);
+        width: bw(2);
 
-        font-size: font-size-value(5);
-        line-height: line-height-value(7);
+        font-size: fs(5);
+        line-height: lh(7);
     }
 
     &__menu {
@@ -47,21 +47,21 @@
     }
 
     &__hamburger {
-        z-index: z-index-value(1);
+        z-index: zi(1);
     }
 
     &__mobile-menu {
         position: absolute;
-        inset: inset-value(0);
+        inset: in(0);
 
         display: flex;
         flex-flow: column nowrap;
-        gap: gap-value(3);
+        gap: gap(3);
         align-items: flex-start;
         justify-content: flex-start;
 
-        width: bloc-width-value(10);
-        padding: padding-value(5) padding-value(3);
+        width: bw(10);
+        padding: p(5) p(3);
 
         visibility: hidden;
         background: $bg-gradient;
@@ -83,21 +83,21 @@
 
     @media only screen and (width >= $sm) {
         &__logo-container {
-            width: bloc-width-value(8);
+            width: bw(8);
         }
 
         &__logo {
-            width: element-width-value(8);
+            width: ew(8);
         }
 
         &__navbar {
-            width: bloc-width-value(8);
+            width: bw(8);
         }
 
         &__menu {
             display: flex;
             flex-flow: row nowrap;
-            gap: gap-value(7);
+            gap: gap(7);
             align-items: center;
             justify-content: space-evenly;
         }
