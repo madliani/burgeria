@@ -1,5 +1,5 @@
-@use "utilities/size-utilities" as *;
-@use "utilities/spacing-utilities" as *;
+@use "../../design/utilities/size-utilities" as *;
+@use "../../design/utilities/spacing-utilities" as *;
 
 .base-footer {
     display: flex;

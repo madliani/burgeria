@@ -1,8 +1,8 @@
-@use "constants/breakpoints" as *;
-@use "constants/font-weights" as *;
-@use "utilities/font-utilities" as *;
-@use "utilities/size-utilities" as *;
-@use "utilities/spacing-utilities" as *;
+@use "../../design/constants/breakpoints" as *;
+@use "../../design/constants/font-weights" as *;
+@use "../../design/utilities/font-utilities" as *;
+@use "../../design/utilities/size-utilities" as *;
+@use "../../design/utilities/spacing-utilities" as *;
 
 .home-hero {
     display: flex;
