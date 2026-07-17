@@ -1,9 +1,9 @@
 @use "../../design/constants/backgrounds" as *;
 @use "../../design/constants/breakpoints" as *;
-@use "../../design/utilities/font-utilities" as *;
-@use "../../design/utilities/spacing-utilities" as *;
-@use "../../design/utilities/size-utilities" as *;
-@use "../../design/utilities/position-utilities" as *;
+@use "../../design/utils/font-utils" as *;
+@use "../../design/utils/spacing-utils" as *;
+@use "../../design/utils/size-utils" as *;
+@use "../../design/utils/position-utils" as *;
 
 .base-header {
     display: flex;
