@@ -1,19 +1,19 @@
 // Design system styles
 
 // Base Layout styles
-@use "../layouts/base-layout";
+@use "../layouts/base-layout" as *;
 
 // Base Header styles
-@use "../blocs/base-header";
+@use "../blocs/base-header" as *;
 
 // Base Main styles
-@use "../blocs/base-main";
+@use "../blocs/base-main" as *;
 
 // Base Footer styles
-@use "../blocs/base-footer";
+@use "../blocs/base-footer" as *;
 
 // Home Hero styles
-@use "../blocs/home-hero";
+@use "../blocs/home-hero" as *;
 
 // Base Noscript styles
-@use "../blocs/noscript";
+@use "../blocs/noscript" as *;
