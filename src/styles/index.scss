@@ -1,10 +1,14 @@
 // All styles
 
 // Configuration styles for libraries
+
 @use "libraries.config" as *;
 
 // Libraries
+
 @use "libraries" as *;
 
 // Global styles
+
+// Homepage styles
 @use "global/pages/index" as *;
