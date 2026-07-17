@@ -36,8 +36,8 @@ public/
 # Assets for pages
 src/assets/
 
-# Scripts for pages
+# Scripts for components
 src/components/utils/
 
-# Types for pages
+# Types for components
 src/components/types/
