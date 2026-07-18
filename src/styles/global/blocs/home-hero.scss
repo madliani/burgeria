@@ -7,34 +7,34 @@
 .home-hero {
     display: flex;
     flex-flow: column nowrap;
-    gap: gp(5);
+    gap: gap(5);
     align-items: center;
     justify-content: center;
 
-    width: bwd(10);
+    width: bweight(10);
 
     text-align: center;
 
     &__title {
-        font-size: fs(12);
+        font-size: font-size(12);
         font-weight: bold;
-        line-height: lh(12);
+        line-height: line-height(12);
     }
 
     &__subtitle {
-        font-size: fs(7.5);
-        line-height: lh(9);
+        font-size: font-size(7.5);
+        line-height: line-height(9);
     }
 
     @media only screen and (width >= $sm) {
         &__title {
-            font-size: fs(17);
-            line-height: lh(12);
+            font-size: font-size(17);
+            line-height: line-height(12);
         }
 
         &__subtitle {
-            font-size: fs(12);
-            line-height: lh(12);
+            font-size: font-size(12);
+            line-height: line-height(12);
         }
     }
 }

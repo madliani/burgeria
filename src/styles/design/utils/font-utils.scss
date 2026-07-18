@@ -1,12 +1,12 @@
 // Font Utils
 
-@function fs($multiplier) {
+@function font-size($multiplier) {
     $default-font-size: 0.25rem;
 
     @return $default-font-size * $multiplier;
 }
 
-@function lh($multiplier) {
+@function line-height($multiplier) {
     $default-line-height: 0.25rem;
 
     @return $default-line-height * $multiplier;

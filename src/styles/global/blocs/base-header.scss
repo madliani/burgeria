@@ -12,14 +12,14 @@
     justify-content: space-around;
 
     min-height: block-height-value(1);
-    padding: pd(5) pd(7);
+    padding: padding(5) padding(7);
 
     &__logo-container {
-        width: bwd(8);
+        width: bweight(8);
     }
 
     &__logo {
-        width: ewd(8);
+        width: eweight(8);
     }
 
     &__navbar {
@@ -28,10 +28,10 @@
         align-items: center;
         justify-content: flex-end;
 
-        width: bwd(2);
+        width: bweight(2);
 
-        font-size: fs(5);
-        line-height: lh(7);
+        font-size: font-size(5);
+        line-height: line-height(7);
     }
 
     &__menu {
@@ -47,21 +47,21 @@
     }
 
     &__hamburger {
-        z-index: zi(1);
+        z-index: z-index(1);
     }
 
     &__mobile-menu {
         position: absolute;
-        inset: inst(0);
+        inset: inset(0);
 
         display: flex;
         flex-flow: column nowrap;
-        gap: gp(3);
+        gap: gap(3);
         align-items: flex-start;
         justify-content: flex-start;
 
-        width: bwd(10);
-        padding: pd(5) pd(3);
+        width: bweight(10);
+        padding: padding(5) padding(3);
 
         visibility: hidden;
         background: $bg-gradient;
@@ -83,21 +83,21 @@
 
     @media only screen and (width >= $sm) {
         &__logo-container {
-            width: bwd(8);
+            width: bweight(8);
         }
 
         &__logo {
-            width: ewd(8);
+            width: eweight(8);
         }
 
         &__navbar {
-            width: bwd(8);
+            width: bweight(8);
         }
 
         &__menu {
             display: flex;
             flex-flow: row nowrap;
-            gap: gp(7);
+            gap: gap(7);
             align-items: center;
             justify-content: space-evenly;
         }

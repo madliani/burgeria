@@ -1,24 +1,24 @@
 // Size Utils
 
-@function bwd($multiplier) {
+@function bweight($multiplier) {
     $default-bloc-width: 10svw;
 
     @return $default-bloc-width * $multiplier;
 }
 
-@function bht($multiplier) {
+@function bheight($multiplier) {
     $default-bloc-height: 10svh;
 
     @return $default-bloc-height * $multiplier;
 }
 
-@function ewd($multiplier) {
+@function eweight($multiplier) {
     $default-bloc-width: 1rem;
 
     @return $default-bloc-width * $multiplier;
 }
 
-@function eht($multiplier) {
+@function ehight($multiplier) {
     $default-bloc-height: 1rem;
 
     @return $default-bloc-height * $multiplier;

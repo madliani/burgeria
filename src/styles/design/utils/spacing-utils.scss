@@ -1,13 +1,13 @@
 // Spacing Utils
 
-@function pd($multiplier) {
+@function padding($multiplier) {
     $default-padding: 0.25rem;
 
     @return $default-padding * $multiplier;
 }
 
-@function gp($multiplier) {
-    $default-gp: 0.25rem;
+@function gap($multiplier) {
+    $default-gap: 0.25rem;
 
-    @return $default-gp * $multiplier;
+    @return $default-gap * $multiplier;
 }
