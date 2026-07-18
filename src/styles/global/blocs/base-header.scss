@@ -11,7 +11,7 @@
     align-items: center;
     justify-content: space-around;
 
-    min-height: block-height-value(1);
+    min-height: bheight(1);
     padding: padding(5) padding(7);
 
     &__logo-container {
